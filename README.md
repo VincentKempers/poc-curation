@@ -1,8 +1,12 @@
+
 # poc-curation
+
 An Curation Tool written with VueJS
 
-## Todo
-_A list of everything to do and a roadmap_
+# Todo
 
-### Roadmap
-_A roadmap of this project + Image of github projects_
+_(A list of everything to do and a roadmap)_
+
+# Roadmap
+
+_(A roadmap of this project + Image of github projects)_
