@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+        
+        <a v-bind:href="link">home</a>
+        <form action="">
+            <button @click.prevent="logIn"> Login </button>
+            <label for="">name
+                <input type="text" :value="name"> 
+            </label>
+        </form>
+        
+
+        <div>
+            <label><input type="checkbox" v-model="selectedInterest" value="Roman"> Roman </label>
+        
+            <label> <input type="checkbox" v-model="selectedInterest" value="Thriller"> Thriller </label>
+        
+            <label><input type="checkbox" v-model="selectedInterest" value="Crime"> Crime </label>
+        
+            <label><input type="checkbox" v-model="selectedInterest" value="Fictie"> Fictie </label>
+        
+            <label><input type="checkbox" v-model="selectedInterest" value="Non-fictie"> Non-fictie </label>
+            <label><input type="checkbox" v-model="selectedInterest" value="Engelstalig"> Engelstalig </label>
+        </div>
+        <h2>{{selectedInterest.join(', ')}}</h2>
+    </div>
+    <script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            msg:'Hello world',
+            link: 'https://vncn.tk',
+            name: 'vince',
+            selectedInterest: []
+        },
+        methods: {
+            logIn: function () {
+                this.msg = "Hi Vincent"
+            }
+        }
+    })
+
+
+    </script>
+</body>
+</html>

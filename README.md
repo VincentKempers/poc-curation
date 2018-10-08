@@ -20,6 +20,10 @@ _(A list of everything to do and a roadmap)_
 
 _(A roadmap of this project + Image of github projects)_ 
 
+Here you can find my roadmap:
+
+[]()
+
 # Tutorials
 (_Most of these are lynda tutorials_)
 
