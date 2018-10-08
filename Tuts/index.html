@@ -22,15 +22,16 @@
 
         <div>
             <label><input type="checkbox" v-model="selectedInterest" value="Roman"> Roman </label>
-        
             <label> <input type="checkbox" v-model="selectedInterest" value="Thriller"> Thriller </label>
-        
             <label><input type="checkbox" v-model="selectedInterest" value="Crime"> Crime </label>
-        
             <label><input type="checkbox" v-model="selectedInterest" value="Fictie"> Fictie </label>
-        
             <label><input type="checkbox" v-model="selectedInterest" value="Non-fictie"> Non-fictie </label>
             <label><input type="checkbox" v-model="selectedInterest" value="Engelstalig"> Engelstalig </label>
+        </div>
+
+        <div>
+            <input type="text" v-model.number="tempFahrenheit">
+            <p>Temperature in Celcius: {{Math.round(5/9 * (tempFahrenheit -32))}}</p>
         </div>
         <h2>{{selectedInterest.join(', ')}}</h2>
     </div>
@@ -41,7 +42,8 @@
             msg:'Hello world',
             link: 'https://vncn.tk',
             name: 'vince',
-            selectedInterest: []
+            selectedInterest: [],
+            tempFahrenheit: 0
         },
         methods: {
             logIn: function () {
