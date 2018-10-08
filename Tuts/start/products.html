@@ -129,11 +129,11 @@
           response: '',
           products:[],
         },
-        watch {
+        watch: {
           question: function(newValue) {
                 if(newValue.indexOf('products') > -1) {
                     this.response = 'sure i can do this for you';
-                    document.getJSON('https://hplussport.com/api/products').done(function(data){
+                    $.getJSON('https://hplussport.com/api/products').done(function(data){
                         vm.products = data;
                     })
                 } else {
