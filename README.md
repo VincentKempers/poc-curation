@@ -46,3 +46,6 @@ Other resources I will be using.
 # Inspiration
 - [30 VueJS projects](https://medium.mybridge.co/30-amazing-vue-js-open-source-projects-for-the-past-year-v-2018-d39a0d019bb7)
 
+# Link to my findings
+- [Today i Learned](TIL.md)
+
