@@ -29,11 +29,22 @@
             <label><input type="checkbox" v-model="selectedInterest" value="Engelstalig"> Engelstalig </label>
         </div>
 
-        <div>
-            <input type="text" v-model.number="tempFahrenheit">
-            <p>Temperature in Celcius: {{Math.round(5/9 * (tempFahrenheit -32))}}</p>
-        </div>
         <h2>{{selectedInterest.join(', ')}}</h2>
+        <div>
+            <input type="text" v-model.number.lazy="tempFahrenheit">
+            <p>Temperature in Celcius: {{tempCelcius}}</p>
+        </div>
+        
+
+        <div>
+            <input type="text" v-model="question">
+            {{response}}
+            <ul>
+                <li v-for="products in products"> {{products.name}}</li>
+            </ul>
+        </div>
+
+
     </div>
     <script>
     var vm = new Vue({
@@ -43,7 +54,29 @@
             link: 'https://vncn.tk',
             name: 'vince',
             selectedInterest: [],
-            tempFahrenheit: 0
+            tempFahrenheit: 0,
+            question: '',
+            response: '',
+            products:[],
+
+        },
+        watch: {
+            question: function(newValue) {
+                if(newValue.indexOf('products') > -1) {
+                    this.response = 'sure i can do this for you';
+                    document.getJSON('https://hplussport.com/api/products').done(function(data){
+                        vm.products = data;
+                    })
+                } else {
+                    this.response = "Sorry, I don't understand your question?";
+                    this.product = [];
+                }
+            }
+        },
+        computed: {
+            tempCelcius: function() {
+                return Math.round(5 / 9 * (this.tempFahrenheit -32));
+            }
         },
         methods: {
             logIn: function () {
@@ -54,5 +87,6 @@
 
 
     </script>
+    <!-- Math.round(5/9 * (tempFahrenheit -32)) -->
 </body>
 </html>
