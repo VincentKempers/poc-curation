@@ -15,3 +15,27 @@ It supports key features like:
 - Who is in the store (right now)
 - And a hub where you immediatly can see if they are open or not.
 
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your tests
+```
+npm run test
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
