@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">   
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <div id="app">
         <h1>{{msg}}</h1>
-        
+
         <a v-bind:href="link">home</a>
         <form action="">
             <button @click.prevent="logIn"> Login </button>
             <label for="">name
-                <input type="text" :value="name"> 
+                <input type="text" :value="name">
             </label>
         </form>
-        
+
         <global-component></global-component>
         <local-component></local-component>
-        
+
         <div>
             <label><input type="checkbox" v-model="selectedInterest" value="Roman"> Roman </label>
             <label> <input type="checkbox" v-model="selectedInterest" value="Thriller"> Thriller </label>
@@ -30,14 +32,14 @@
             <label><input type="checkbox" v-model="selectedInterest" value="Non-fictie"> Non-fictie </label>
             <label><input type="checkbox" v-model="selectedInterest" value="Engelstalig"> Engelstalig </label>
         </div>
-        
+
         <h2>{{selectedInterest.join(', ')}}</h2>
         <div>
             <input type="text" v-model.number.lazy="tempFahrenheit">
             <p>Temperature in Celcius: {{tempCelcius}}</p>
         </div>
-        
-        
+
+
         <div>
             <input type="text" v-model="question">
             {{response}}
@@ -45,70 +47,71 @@
                 <li v-for="products in products"> {{products.name}}</li>
             </ul>
         </div>
-        
+
         <br>
         <product-list title="shop our award winning productline"></product-list>
         <br>
-        
+
     </div>
 
-<script>
-    
-    Vue.component('global-component', {
-        template: '<div>Changing the template for this component    </div>',
-        
-    })
-    
-    var LocalComponent = {template:'<div>This is a Local Component</div>'}
+    <script>
 
-    Vue.component('product-list', {
+        Vue.component('global-component', {
+            template: '<div>Changing the template for this component    </div>',
+
+        })
+
+        var LocalComponent = { template: '<div>This is a Local Component</div>' }
+
+        Vue.component('product-list', {
             template: `<div class="product-list"> <h2>{{title}}</h2></div>`,
             props: ['title']
         })
-    
-    var vm = new Vue({
-        el: '#app',
-        data: {
-            msg:'Hello world',
-            link: 'https://vncn.tk',
-            name: 'vince',
-            selectedInterest: [],
-            tempFahrenheit: 0,
-            question: '',
-            response: '',
-            products:[],
-            
-        },
-        components: {
-            'local-component' : LocalComponent
-        },
-        watch: {
-            question: function(newValue) {
-                if(newValue.indexOf('products') > -1) {
-                    this.response = 'sure i can do this for you';
-                    document.getJSON('https://hplussport.com/api/products').done(function(data){
-                        vm.products = data;
-                    })
-                } else {
-                    this.response = "Sorry, I don't understand your question?";
-                    this.product = [];
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'Hello world',
+                link: 'https://vncn.tk',
+                name: 'vince',
+                selectedInterest: [],
+                tempFahrenheit: 0,
+                question: '',
+                response: '',
+                products: [],
+
+            },
+            components: {
+                'local-component': LocalComponent
+            },
+            watch: {
+                question: function (newValue) {
+                    if (newValue.indexOf('products') > -1) {
+                        this.response = 'sure i can do this for you';
+                        document.getJSON('https://hplussport.com/api/products').done(function (data) {
+                            vm.products = data;
+                        })
+                    } else {
+                        this.response = "Sorry, I don't understand your question?";
+                        this.product = [];
+                    }
+                }
+            },
+            computed: {
+                tempCelcius: function () {
+                    return Math.round(5 / 9 * (this.tempFahrenheit - 32));
+                }
+            },
+            methods: {
+                logIn: function () {
+                    this.msg = "Hi Vincent"
                 }
             }
-        },
-        computed: {
-            tempCelcius: function() {
-                return Math.round(5 / 9 * (this.tempFahrenheit -32));
-            }
-        },
-        methods: {
-            logIn: function () {
-                this.msg = "Hi Vincent"
-            }
-        }
-    })
+        })
 
 
     </script>
     <!-- Math.round(5/9 * (tempFahrenheit -32)) -->
 </body>
+
 </html>
