@@ -40,11 +40,10 @@ The playlist of tutorials i will be watching on [Lynda](https://lynda.com).
 - [ ] [CSS Grid](https://scrimba.com/g/gR8PTE) 2hrs
 - [ ] [CSS FlexBox](https://scrimba.com/g/gflexbox) 2hrs
 
-The courses i will follow on [teamtreehouse](https://teamtreehouse.com)
+The courses I will follow on [teamtreehouse](https://teamtreehouse.com)
 
-- [x] [VueJS Basics](https://teamtreehouse.com/library/vuejs-basics)
+- [x] [VueJS Basics](https://teamtreehouse.com/library/vuejs-basics) 2hrs
 - [x] [Getting started with Webpack](https://teamtreehouse.com/library/getting-started-with-webpack-1)
-- [ ] [User Auth with Express and mongoDB](https://teamtreehouse.com/library/user-authentication-with-express-and-mongo)
 - [ ] [Prototyping with Figma](https://teamtreehouse.com/library/prototyping-with-figma)
 - [ ] [CSS Layouting](https://teamtreehouse.com/library/css-layout-basics)
 - [ ] [Responsive Images](https://teamtreehouse.com/library/responsive-images)
@@ -59,8 +58,8 @@ Other resources I will be using.
 
 - [x] [setup a VueJS project in 5 easy steps](https://medium.com/@subodhgarg/how-to-set-up-vue-js-project-in-5-easy-steps-using-vue-cli-669b1aea518b) - _10min read and doing_
 - [x] [VueJS setup](https://cli.vuejs.org/guide/creating-a-project.html) _10min read and doing_
-- [ ] [5 Tools for Faster Vue.js App Development](https://blog.bitsrc.io/5-tools-for-faster-vue-js-app-development-ad7eda1ee6a8) - _10min read and doing_
-- [ ] [Production Deployment](https://vuejs.org/v2/guide/deployment.html) - _10min read and doing_
+- [x] [5 Tools for Faster Vue.js App Development](https://blog.bitsrc.io/5-tools-for-faster-vue-js-app-development-ad7eda1ee6a8) - _10min read and doing_
+- [x] [Production Deployment](https://vuejs.org/v2/guide/deployment.html) - _10min read and doing_
 - [ ] [Deploying a VueJS app](https://medium.com/netscape/deploying-a-vue-js-2-x-app-to-heroku-in-5-steps-tutorial-a69845ace489) - _10min read and doing_
 
 # Inspiration
