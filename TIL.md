@@ -29,3 +29,27 @@ You can start the VueJS by starting up a node enviroment and installing the CLI 
 
 ### Method
 `Method: {}` you can store functions that run immediatly and most of the time they run immediatly. You can do things immediatly.
+
+## Hooks
+
+### beforeCreate
+Before instance initialization. (will run immediatly)
+
+### Created
+Reactive properties configured; instance not yet mounted. (will run immediatly)
+
+### beforeMount
+Template compiled; ready to be inserted in the DOM. (will run immediatly/ instance)
+
+### Mounted
+Template inserted in DOM, replacing the "el" element. (will run immediatly/instance)
+
+### beforeUpdate
+Data updated; update pending. (will run immediatly/ _when value is set_)
+
+### Updated
+Re-rendered to reflect changes. (will run immediatly/ _when value is set_)
+
+### beforeDestroy & destroy
+when `vm.$destroy()` is called. Watchers and event handlers removed; no reactivity.
+
