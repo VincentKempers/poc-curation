@@ -27,20 +27,32 @@ Here you can find my roadmap:
 # Tutorials
 (_Most of these are lynda tutorials_)
 
-The playlist of tutorials i will be watching.
-- [ ] [My Lynda Playlist](https://www.lynda.com/MyPlaylists?playlistId=18296483) 28 hours
+The playlist of tutorials i will be watching on [Lynda](https://lynda.com).
+- [ ] [My Lynda Playlist](https://www.lynda.com/MyPlaylists?playlistId=18296483) 22 hours
     - [x] Lynda VueJS setup
     - [x] Building an interface with VueJS
-    - [] Advanced NodeJS
-    - [] Learning Webpack
-    - [] CSS3 Animations
-    - [] Mastering webdeveloper interview code
-    - [] Interactive Animations with CSS and Javascript
+    - [ ] Learning webpack 3
+    - [ ] CSS3 Animations
+    - [ ] Mastering webdeveloper interview code
+    - [ ] Interactive Animations with CSS and Javascript
 - [ ] [Free VueJS Course](https://scrimba.com/g/glearnvue) 4hrs
 - [ ] [CSS Grid](https://scrimba.com/g/gR8PTE) 2hrs
 - [ ] [CSS FlexBox](https://scrimba.com/g/gflexbox) 2hrs
 
-(_around 34 hours_)
+The courses i will follow on [teamtreehouse](https://teamtreehouse.com)
+- [x] [VueJS Basics](https://teamtreehouse.com/library/vuejs-basics)
+- [x] [Getting started with Webpack](https://teamtreehouse.com/library/getting-started-with-webpack-1)
+- [ ] [User Auth with Express and mongoDB](https://teamtreehouse.com/library/user-authentication-with-express-and-mongo)
+- [ ] [Prototyping with Figma](https://teamtreehouse.com/library/prototyping-with-figma)
+- [ ] [CSS Layouting](https://teamtreehouse.com/library/css-layout-basics)
+- [ ] [Responsive Images](https://teamtreehouse.com/library/responsive-images)
+- [ ] [Responsive Layouts](https://teamtreehouse.com/library/responsive-layouts)
+- [ ] [3d in the browser](https://teamtreehouse.com/library/3d-in-the-browser)
+- [ ] [Rapid Website prototyping](https://teamtreehouse.com/library/rapid-website-prototyping)
+- [ ] [Javascript Unit Testing](https://teamtreehouse.com/library/javascript-unit-testing)
+
+
+(_around 32 hours_)
 
 Other resources I will be using. 
 - [x] [setup a VueJS project in 5 easy steps](https://medium.com/@subodhgarg/how-to-set-up-vue-js-project-in-5-easy-steps-using-vue-cli-669b1aea518b) - _10min read and doing_
