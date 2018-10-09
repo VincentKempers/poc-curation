@@ -64,7 +64,11 @@ Advantages over single file components
 ### webpack
 With the help of vue-loader you can bundle all the vue files in one .js
 
+Webpack is mostly needed to render all the files 
+
 ### vue-cli
-can help us with the webpack configuration.
+can help us with the webpack configuration. This cli shown in the lynda.com course is on version 2. So i learned in the meantime how vue-cli 3 works and you can find the configuration [here](application/hello-world).
+
+
 
 
