@@ -53,3 +53,18 @@ Re-rendered to reflect changes. (will run immediatly/ _when value is set_)
 ### beforeDestroy & destroy
 when `vm.$destroy()` is called. Watchers and event handlers removed; no reactivity.
 
+## vue CLI  and Webpack
+
+Advantages over single file components
+1. Syntax highlighting for HTML
+2. Modern JavaScript (ES6 and beyond) support (it doesn't when you use the CDN package)
+3. Component-specific (scoped) CSS
+4. hot module replacement with webpack
+
+### webpack
+With the help of vue-loader you can bundle all the vue files in one .js
+
+### vue-cli
+can help us with the webpack configuration.
+
+
