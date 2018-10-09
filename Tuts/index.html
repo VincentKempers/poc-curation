@@ -19,7 +19,9 @@
             </label>
         </form>
         
-
+        <global-component></global-component>
+        <local-component></local-component>
+        
         <div>
             <label><input type="checkbox" v-model="selectedInterest" value="Roman"> Roman </label>
             <label> <input type="checkbox" v-model="selectedInterest" value="Thriller"> Thriller </label>
@@ -28,14 +30,14 @@
             <label><input type="checkbox" v-model="selectedInterest" value="Non-fictie"> Non-fictie </label>
             <label><input type="checkbox" v-model="selectedInterest" value="Engelstalig"> Engelstalig </label>
         </div>
-
+        
         <h2>{{selectedInterest.join(', ')}}</h2>
         <div>
             <input type="text" v-model.number.lazy="tempFahrenheit">
             <p>Temperature in Celcius: {{tempCelcius}}</p>
         </div>
         
-
+        
         <div>
             <input type="text" v-model="question">
             {{response}}
@@ -43,10 +45,27 @@
                 <li v-for="products in products"> {{products.name}}</li>
             </ul>
         </div>
-
-
+        
+        <br>
+        <product-list title="shop our award winning productline"></product-list>
+        <br>
+        
     </div>
-    <script>
+
+<script>
+    
+    Vue.component('global-component', {
+        template: '<div>Changing the template for this component    </div>',
+        
+    })
+    
+    var LocalComponent = {template:'<div>This is a Local Component</div>'}
+
+    Vue.component('product-list', {
+            template: `<div class="product-list"> <h2>{{title}}</h2></div>`,
+            props: ['title']
+        })
+    
     var vm = new Vue({
         el: '#app',
         data: {
@@ -58,7 +77,10 @@
             question: '',
             response: '',
             products:[],
-
+            
+        },
+        components: {
+            'local-component' : LocalComponent
         },
         watch: {
             question: function(newValue) {
