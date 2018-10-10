@@ -38,7 +38,7 @@ The playlist of tutorials i will be watching on [Lynda](https://lynda.com).
   - [ ] Interactive Animations with CSS and Javascript
 - [ ] [Free VueJS Course](https://scrimba.com/g/glearnvue) 4hrs
 - [ ] [CSS Grid](https://scrimba.com/g/gR8PTE) 2hrs
-- [ ] [CSS FlexBox](https://scrimba.com/g/gflexbox) 2hrs
+- [x] [CSS FlexBox](https://scrimba.com/g/gflexbox) 2hrs
 
 The courses I will follow on [teamtreehouse](https://teamtreehouse.com)
 
