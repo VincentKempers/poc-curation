@@ -6,14 +6,14 @@ An Curation Tool written with VueJS
 
 _(A list of everything to do and a roadmap)_
 
+- [x] Setup VueJS
+- [x] Map out curation tool
+  - [x] Create Roadmap
+- [x] Fast set up tool
 - [ ] Design Tutorials
 - [ ] Code Tutorials
 - [ ] Design
 - [ ] Iterate design
-- [ ] Setup VueJS
-- [ ] Map out curation tool
-  - [ ] Create Roadmap
-- [ ] Fast set up tool
 
 # Roadmap
 
@@ -44,7 +44,7 @@ The courses I will follow on [teamtreehouse](https://teamtreehouse.com)
 
 - [x] [VueJS Basics](https://teamtreehouse.com/library/vuejs-basics) 2hrs
 - [x] [Getting started with Webpack](https://teamtreehouse.com/library/getting-started-with-webpack-1)
-- [ ] [Prototyping with Figma](https://teamtreehouse.com/library/prototyping-with-figma)
+- [x] [Prototyping with Figma](https://teamtreehouse.com/library/prototyping-with-figma)
 - [ ] [CSS Layouting](https://teamtreehouse.com/library/css-layout-basics)
 - [ ] [Responsive Images](https://teamtreehouse.com/library/responsive-images)
 - [ ] [Responsive Layouts](https://teamtreehouse.com/library/responsive-layouts)
