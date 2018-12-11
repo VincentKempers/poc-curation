@@ -5,6 +5,10 @@
 </template>
 
 <style lang="scss">
+html {
+  background-color: #f8fbff;
+}
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
