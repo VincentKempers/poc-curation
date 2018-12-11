@@ -11,8 +11,7 @@ export default {
       offlineTitle: "Oh, nee!",
       offlineDescription:
         "Het ziet er naar uit dat je geen internet hebt! probeer het later nog eens!",
-      queryTitle: "Vraag me iets...",
-      voiceTitle: "hmm?..."
+      queryTitle: "Vraag me iets..."
     },
     settings: {
       speechLang: "nl-NL", // <- output language

@@ -24,7 +24,7 @@
       </div>
 
       <!-- Chat window -->
-      <table v-for="a in answers" class="chat-window">
+      <table v-for="a in answers" :key="a" class="chat-window">
         <!-- Your messages -->
         <tr>
           <td class="bubble">{{a.result.resolvedQuery}}</td>
@@ -40,7 +40,7 @@
             >{{a.result.fulfillment.speech}}</div>
 
             <!-- Google Assistant output -->
-            <div v-for="r in a.result.fulfillment.messages">
+            <div v-for="r in a.result.fulfillment.messages" :key="r">
               <!-- Bot message types / Card -->
               <div class="mdc-card" v-if="r.type == 'basic_card'">
                 <img
@@ -56,7 +56,7 @@
                   <h2 class="mdc-card__subtitle">{{r.subtitle}}</h2>
                 </section>
                 <section class="mdc-card__supporting-text">{{r.formattedText}}</section>
-                <section class="mdc-card__actions" v-for="button in r.buttons">
+                <section class="mdc-card__actions" v-for="button in r.buttons" :key="button">
                   <a
                     class="mdc-button mdc-button--compact themed mdc-card__action"
                     target="_blank"
@@ -100,6 +100,7 @@
                 <ul
                   class="mdc-list mdc-list--two-line mdc-list--avatar-list"
                   v-for="item in r.items"
+                  v-bind:key="item"
                   @click="autosubmit(item.optionInfo.key)"
                 >
                   <li class="mdc-list-item">
@@ -136,6 +137,7 @@
                   class="suggestion"
                   @click="autosubmit(s.title)"
                   v-for="s in r.suggestions"
+                  :key="s"
                 >{{s.title}}</div>
               </div>
 
