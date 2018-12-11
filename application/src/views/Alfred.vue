@@ -218,19 +218,21 @@
     padding: 16px 0px
     background-color: white
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
-    z-index: 999
-    position: fixed
+    position: fixed;
+    top: 81%
     bottom: 0;
+    left: 0;
     width: 100%
 
 .queryform
-    border: 0
+    // border: 0
     width: 100% - 20%
-    margin-left: 60px
+    margin-left: 0
     font-size: 16px
     outline: none
     color: rgba(0,0,0,0.8)
     font-weight: 500
+    
 
     @media screen and (max-width: 320px)
         width: 100% - 35%
@@ -241,9 +243,6 @@
     vertical-align: middle
     color: rgba(0,0,0,0.8)
     cursor: pointer
-
-.recording
-    color: #F44336
 
 .iicon.t2s
     margin-left: 10px
