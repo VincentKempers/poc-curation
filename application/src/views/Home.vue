@@ -9,7 +9,7 @@
       :mouseDrag="true"
     >
       <slide>
-        <img alt="Vue logo" src="../assets/logo.png">
+        <img alt="Vue logo" src="../assets/onboarding.svg">
         <HelloWorld/>
         <div class="buttons">
           <button @click.prevent="prevSlide">Misschien later</button>
@@ -17,7 +17,7 @@
         </div>
       </slide>
       <slide>
-        <img alt="Vue logo" src="../assets/logo.png">
+        <img alt="Vue logo" src="../assets/onboarding-alfred.svg">
         <HelloWorld/>
         <div class="buttons">
           <button @click.prevent="prevSlide">Misschien later</button>
@@ -25,8 +25,11 @@
         </div>
       </slide>
       <slide>
-        <img alt="Vue logo" src="../assets/logo.png">
-        <HelloWorld/>
+        <p>
+          "Lorem ipsum dolodadr sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat. "
+        </p>
         <div class="buttons">
           <button @click.prevent="prevSlide">Misschien later</button>
           <button @click.prevent="nextSlide">Volgende</button>
@@ -39,6 +42,10 @@
 <style lang="scss" scoped>
 .VueCarousel-slide {
   min-height: 98vh;
+}
+
+img {
+  width: 80%;
 }
 
 .buttons {
