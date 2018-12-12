@@ -18,18 +18,37 @@
       </slide>
       <slide>
         <img alt="Vue logo" src="../assets/onboarding-alfred.svg">
-        <HelloWorld/>
+        <h3>Mijn naam is Alfred</h3>
+        <p>Ik ben hier om je te helpen met al jouw vragen, je te sturen binnen de app en om zo nu en dan een boek aan te raden! Zou je mij kunnen vertellen wat voor boeken je graag leest?</p>
         <div class="buttons">
           <button @click.prevent="prevSlide">Misschien later</button>
           <button @click.prevent="nextSlide">Ja natuurlijk!</button>
         </div>
       </slide>
       <slide>
+        <h2>Wat voor boeken lees jij graag?</h2>
         <p>
-          "Lorem ipsum dolodadr sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat. "
+          Maak een selectie in de volgende genre’s.
+          Aan de hand van jou keuzes kan ik jou boeken aanraden of je inlichten over speciale kortingen.
         </p>
+
+        <div class="choices">
+          <label>
+            <input type="checkbox">genre
+          </label>
+          <label>
+            <input type="checkbox">genre
+          </label>
+          <label>
+            <input type="checkbox">genre
+          </label>
+          <label>
+            <input type="checkbox">genre
+          </label>
+          <label>
+            <input type="checkbox">genre
+          </label>
+        </div>
         <div class="buttons">
           <button @click.prevent="prevSlide">Misschien later</button>
           <button @click.prevent="nextSlide">Volgende</button>
@@ -74,6 +93,27 @@ img {
   button:nth-child(2) {
     background-color: #4da1ff;
     color: white;
+  }
+}
+
+.choices {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  label {
+    background-color: #e5e6e8;
+    border: none;
+    border-radius: 0.4em;
+    margin: 1em;
+    width: 4rem;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 1.4rem 0.8rem 1.4rem 0.8rem;
+
+    input {
+      visibility: hidden;
+      position: absolute;
+    }
   }
 }
 </style>

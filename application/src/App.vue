@@ -5,12 +5,17 @@
 </template>
 
 <style lang="scss">
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("assets/font/SourceSansPro-Regular.ttf");
+}
+
 html {
   background-color: #f8fbff;
 }
 
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "SourceSansPro", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f8fbff;
