@@ -73,8 +73,8 @@
 </template>
 
 <style lang="scss" scoped>
-.VueCarousel-slide {
-  min-height: 98vh;
+.VueCarousel-wrapper {
+  min-height: 100vh;
 }
 
 .button_local {
