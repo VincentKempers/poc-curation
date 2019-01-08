@@ -1,11 +1,7 @@
 <template>
   <div class="hello">
     <h3>Welkom bij de Nieuwe Boekhandel!</h3>
-    <p>
-      "Lorem ipsum dolodadr sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-      laboris nisi ut aliquip ex ea commodo consequat. "
-    </p>
+    <p>Welkom in de [naam] app! Om je opweg te helpen hebben wij een aantal boekwinkels bij jou in de buurt geselecteerd. Door een van deze boekwinkels te kiezen kunnen wij jou een gepersonaliseerd aanbod aanbieden.</p>
   </div>
 </template>
 
