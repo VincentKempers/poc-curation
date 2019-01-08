@@ -8,12 +8,12 @@
 
 <style lang="scss" scoped>
 #nav {
-  background-color: grey;
+  background-color: #e1e1e1;
   padding: 15px;
   position: fixed;
   bottom: 0;
   z-index: +1;
-  width: 97vw;
+  width: 92vw;
   left: 0;
   display: flex;
   flex-direction: row;
