@@ -187,7 +187,7 @@
 
 .alfred
     margin: 0
-    background-color: #F5F5F5
+    background-color: #f8fbff
     font-family: 'Roboto', 'Google Sans', sans-serif
 
 .themed
@@ -200,6 +200,7 @@
 
 .wrapper.ai-window
     padding: 1rem
+    min-height: 11vh
 
 .up
     font-size: 32px
@@ -219,7 +220,7 @@
     background-color: white
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
     position: fixed;
-    top: 81%
+    top: 87%
     bottom: 0;
     left: 0;
     width: 100%
@@ -256,26 +257,27 @@
 
 .bubble
     max-width: 300px
-    background-color: #E1E1E1
-    padding: 16px
+    background-color: #4da1ff
+    padding: 10px
     border-radius: 8px
-    color: rgba(0,0,0,0.7)
+    color: white
     float: right
     animation: msg .25s linear
 
 .bubble.bot
     background-color: white
+    color: black 
     float: left
     margin-right: 10px
 
 td
-    margin-top: 30px
+    margin-top: 10px
     margin-bottom: 10px
 
 .mdc-card
     background-color: white
     max-width: 300px
-    margin-bottom: 5px
+    margin-bottom: 30px
     animation: msg .45s ease-in-out
     border-radius: 8px
     box-shadow: 0 1px 4px 0 rgba(32, 33, 36, 0.28)
@@ -366,21 +368,6 @@ td
     100%
         transform: scaleY(1)
 
-.copyright
-    font-weight: 600
-    color: rgba(0,0,0,0.8)
-
-.copyright a
-    text-decoration: none
-    color: rgba(0,0,0,0.8)
-    border-bottom: 2px solid transparent
-
-.copyright a:hover
-    color: red
-    border-bottom: 2px solid red
-
-.google-chip
-    margin-top: 52px
 </style>
 
 
