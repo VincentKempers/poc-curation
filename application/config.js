@@ -7,10 +7,10 @@ export default {
   locale: {
     strings: {
       welcomeTitle: "Hallo, ik ben Alfred. Vraag me iets om te beginnen",
-      welcomeDescription: `Je kan 'hallo' typen of je kan op het microfoontje klikken`,
+      welcomeDescription: `Vraag mij is over "evenementen"`,
       offlineTitle: "Oh, nee!",
       offlineDescription:
-        "Het ziet er naar uit dat je geen internet hebt! probeer het later nog eens!",
+        "Hallo, !? Hallo!? Volgens mij heb jij geen internet. Probeer het zo nog een keer.. ",
       queryTitle: "Vraag me iets..."
     },
     settings: {
