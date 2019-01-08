@@ -16,8 +16,26 @@
         </div>
       </slide>
       <slide>
+        <img alt="Vue logo" src="../assets/onboarding.svg">
+        <HelloWorld/>
+        <div class="list-button button_local">
+          <button @click.prevent="nextSlide">Boekhandel 1</button>
+          <button @click.prevent="nextSlide">Boekhandel 2</button>
+          <button @click.prevent="nextSlide">Boekhandel 3</button>
+          <button @click.prevent="nextSlide">Boekhandel 4</button>
+        </div>
+      </slide>
+      <slide>
+        <img alt="Vue logo" src="../assets/onboarding.svg">
+        <HelloWorld/>
+        <div class="buttons button_local">
+          <button class="white_button" @click.prevent="prevSlide">Terug</button>
+          <button class="blue_button" @click.prevent="nextSlide">Volgende</button>
+        </div>
+      </slide>
+      <slide>
         <img alt="Vue logo" src="../assets/onboarding-alfred.svg">
-        <h3>Kies uw boekwinkel</h3>
+        <h3>Mijn naam is Alfred</h3>
         <p>Ik ben hier om je te helpen met al jouw vragen, je te sturen binnen de app en om zo nu en dan een boek aan te raden! Zou je mij kunnen vertellen wat voor boeken je graag leest?</p>
         <div class="buttons button_local">
           <button class="white_button" @click.prevent="prevSlide">Misschien later</button>
