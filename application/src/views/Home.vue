@@ -18,11 +18,11 @@
       <slide>
         <img alt="Vue logo" src="../assets/onboarding.svg">
         <HelloWorld/>
-        <div class="list-button button_local">
-          <button @click.prevent="nextSlide">Boekhandel 1</button>
-          <button @click.prevent="nextSlide">Boekhandel 2</button>
-          <button @click.prevent="nextSlide">Boekhandel 3</button>
-          <button @click.prevent="nextSlide">Boekhandel 4</button>
+        <div class="list-button">
+          <button class="welcome-button button_local" @click.prevent="nextSlide">Boekhandel 1</button>
+          <button class="welcome-button button_local" @click.prevent="nextSlide">Boekhandel 2</button>
+          <button class="welcome-button button_local" @click.prevent="nextSlide">Boekhandel 3</button>
+          <button class="welcome-button button_local" @click.prevent="nextSlide">Boekhandel 4</button>
         </div>
       </slide>
       <slide>
@@ -48,7 +48,6 @@
           Maak een selectie in de volgende genre’s.
           Aan de hand van jou keuzes kan ik jou boeken aanraden of je inlichten over speciale kortingen.
         </p>
-
         <div class="choices">
           <label id="label">
             <input type="checkbox">Detective
@@ -107,7 +106,7 @@ img {
 
 .welcome-button {
   button {
-    background-color: #4da1ff;
+    background-color: #4da1ff !important;
     color: white;
     border: none;
     border-radius: 0.4em;
