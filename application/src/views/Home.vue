@@ -76,7 +76,7 @@
             <input type="checkbox" id="kookboeken" value="Kookboeken" v-model="checkedNames">
             <label for="kookboeken">Kookboeken</label>
           </div>
-          <div class="buttons">
+          <div class="buttons button_local">
             <button class="white_button" @click.prevent="prevSlide">Misschien later</button>
             <button class="blue_button" @click="persist">Volgende</button>
           </div>
@@ -88,12 +88,12 @@
 
 <style lang="scss" scoped>
 .block {
-  min-height: 100vh !important;
+  min-height: 90vh;
 }
 
 .button_local {
   position: relative;
-  top: 5em;
+  top: 7em;
   width: 100%;
 }
 
@@ -104,7 +104,7 @@ img {
 
 .welcome-button {
   button {
-    background-color: #4da1ff !important;
+    background-color: #4da1ff;
     color: white;
     border: none;
     border-radius: 0.4em;

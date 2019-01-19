@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import Alfred from "./views/Chatboard.vue";
+import Dashboard from "./views/Dashboard.vue";
 
 Vue.use(Router);
 
@@ -27,6 +28,11 @@ export default new Router({
       path: "/alfred",
       name: "Alfred",
       component: Alfred
+    },
+    {
+      path: "/dashboard",
+      name: "Dashboard",
+      component: Dashboard
     }
   ]
 });
