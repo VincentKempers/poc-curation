@@ -19,10 +19,10 @@
         <img alt="Vue logo" src="../assets/onboarding.svg">
         <HelloWorld/>
         <div class="list-button">
-          <button class="welcome-button button_local" @click.prevent="nextSlide">Boekhandel 1</button>
-          <button class="welcome-button button_local" @click.prevent="nextSlide">Boekhandel 2</button>
-          <button class="welcome-button button_local" @click.prevent="nextSlide">Boekhandel 3</button>
-          <button class="welcome-button button_local" @click.prevent="nextSlide">Boekhandel 4</button>
+          <button @click.prevent="nextSlide">Boekhandel 1</button>
+          <button @click.prevent="nextSlide">Boekhandel 2</button>
+          <button @click.prevent="nextSlide">Boekhandel 3</button>
+          <button @click.prevent="nextSlide">Boekhandel 4</button>
         </div>
       </slide>
       <slide>
@@ -101,7 +101,8 @@
 }
 
 img {
-  width: 80%;
+  width: 70%;
+  margin: 0.2em;
 }
 
 .welcome-button {
@@ -116,6 +117,7 @@ img {
     padding-top: 1.4rem;
     padding-bottom: 1.4rem;
     padding: 1.4em 1em 1.4em 1em;
+    margin-top: auto;
   }
 }
 
@@ -135,7 +137,7 @@ img {
     font-weight: 500;
     padding-top: 1.4rem;
     padding-bottom: 1.4rem;
-    padding: 1.4em 1em 1.4em 1em;
+    padding: 0.8em 1.4em 0.8em 1.4em;
   }
   .white_button {
     background-color: #e5e6e8;
@@ -169,6 +171,19 @@ img {
         color: red;
       }
     }
+  }
+}
+
+.list-button {
+  button {
+    background-color: #4da1ff;
+    color: white;
+    border: none;
+    border-radius: 0.4em;
+    width: 100%;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 1.4em 1em 1.4em 1em;
   }
 }
 </style>
