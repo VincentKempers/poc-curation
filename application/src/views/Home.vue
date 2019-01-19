@@ -17,9 +17,9 @@
       </slide>
       <slide>
         <img alt="Vue logo" src="../assets/onboarding.svg">
-        <HelloWorld/>
+        <h3>Kies uw boekwinkel</h3>
         <div class="list-button">
-          <button @click.prevent="nextSlide">Boekhandel 1</button>
+          <button @click.prevent="nextSlide">De Nieuwe Boekhandel</button>
           <button @click.prevent="nextSlide">Boekhandel 2</button>
           <button @click.prevent="nextSlide">Boekhandel 3</button>
           <button @click.prevent="nextSlide">Boekhandel 4</button>
@@ -184,6 +184,7 @@ img {
     font-size: 1em;
     font-weight: 500;
     padding: 1.4em 1em 1.4em 1em;
+    margin-top: 1em;
   }
 }
 </style>
