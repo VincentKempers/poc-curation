@@ -10,7 +10,8 @@
     >
       <slide>
         <img alt="Vue logo" src="../assets/onboarding.svg">
-        <HelloWorld/>
+        <h3>Welkom!</h3>
+        <p>Welkom in de Alfred app! Om je opweg te helpen hebben wij een aantal boekwinkels bij jou in de buurt geselecteerd. Door een van deze boekwinkels te kiezen kunnen wij jou een gepersonaliseerd aanbod aanbieden.</p>
         <div class="welcome-button button_local">
           <button @click.prevent="nextSlide">Kies uw boekwinkel</button>
         </div>
@@ -27,7 +28,8 @@
       </slide>
       <slide>
         <img alt="Vue logo" src="../assets/onboarding.svg">
-        <HelloWorld/>
+        <h3>Welkom bij de Nieuwe Boekhandel!</h3>
+        <p>Je hebt gekozen voor de Nieuwe Boekhandel, perfecte keuze! De Nieuwe Boekhandel is een boekwinkel uit Bos en Lommer in Amsterdam en staat bekend om zijn huiselijke sfeer!</p>
         <div class="buttons button_local">
           <button class="white_button" @click.prevent="prevSlide">Terug</button>
           <button class="blue_button" @click.prevent="nextSlide">Volgende</button>
@@ -43,46 +45,41 @@
         </div>
       </slide>
       <slide>
-        <h2>Wat voor boeken lees jij graag?</h2>
-        <p>
-          Maak een selectie in de volgende genre’s.
-          Aan de hand van jou keuzes kan ik jou boeken aanraden of je inlichten over speciale kortingen.
-        </p>
-        <div class="choices">
-          <label id="label">
-            <input type="checkbox">Detective
-          </label>
-          <label>
-            <input type="checkbox">Kinderboeken
-          </label>
-          <label>
-            <input type="checkbox">Science Fiction
-          </label>
-          <label>
-            <input type="checkbox"> Biografie
-          </label>
-          <label>
-            <input type="checkbox">Fantasy
-          </label>
-          <label>
-            <input type="checkbox">Roman
-          </label>
-          <label>
-            <input type="checkbox">Thriller
-          </label>
-          <label>
-            <input type="checkbox">Oorlog
-          </label>
-          <label>
-            <input type="checkbox">Literatuur
-          </label>
-          <label>
-            <input type="checkbox">Biografie
-          </label>
-        </div>
-        <div class="buttons">
-          <button class="white_button" @click.prevent="prevSlide">Misschien later</button>
-          <button class="blue_button" @click.prevent="nextSlide">Volgende</button>
+        <div class="block">
+          <h2>Wat voor boeken lees jij graag?</h2>
+          <p>
+            Maak een selectie in de volgende genre’s.
+            Aan de hand van jou keuzes kan ik jou boeken aanraden of je inlichten over speciale kortingen.
+          </p>
+          <div class="choices" id="element">
+            <input type="checkbox" id="detective" value="Detective" v-model="checkedNames">
+            <label for="detective">Detective</label>
+            <input type="checkbox" id="kinderboeken" value="Kinderboeken" v-model="checkedNames">
+            <label for="kinderboeken">Kinderboeken</label>
+            <input
+              type="checkbox"
+              id="scienceFiction"
+              value="Science Fiction"
+              v-model="checkedNames"
+            >
+            <label for="scienceFiction">Science Fiction</label>
+            <input type="checkbox" id="biografie" value="Biografie" v-model="checkedNames">
+            <label for="biografie">Biografie</label>
+            <input type="checkbox" id="fantasy" value="Fantasy" v-model="checkedNames">
+            <label for="fantasy">Fantasy</label>
+            <input type="checkbox" id="thriller" value="Thriller" v-model="checkedNames">
+            <label for="thriller">Thriller</label>
+            <input type="checkbox" id="oorlog" value="Oorlog" v-model="checkedNames">
+            <label for="oorlog">Oorlog</label>
+            <input type="checkbox" id="romans" value="Romans" v-model="checkedNames">
+            <label for="romans">Romans</label>
+            <input type="checkbox" id="kookboeken" value="Kookboeken" v-model="checkedNames">
+            <label for="kookboeken">Kookboeken</label>
+          </div>
+          <div class="buttons">
+            <button class="white_button" @click.prevent="prevSlide">Misschien later</button>
+            <button class="blue_button" @click="persist">Volgende</button>
+          </div>
         </div>
       </slide>
     </carousel>
@@ -90,18 +87,18 @@
 </template>
 
 <style lang="scss" scoped>
-.VueCarousel-wrapper {
-  min-height: 100vh;
+.block {
+  min-height: 100vh !important;
 }
 
 .button_local {
   position: relative;
-  bottom: 0;
+  top: 5em;
   width: 100%;
 }
 
 img {
-  width: 70%;
+  width: 75%;
   margin: 0.2em;
 }
 
@@ -114,10 +111,7 @@ img {
     width: 100%;
     font-size: 1em;
     font-weight: 500;
-    padding-top: 1.4rem;
-    padding-bottom: 1.4rem;
-    padding: 1.4em 1em 1.4em 1em;
-    margin-top: auto;
+    padding: 1em;
   }
 }
 
@@ -154,6 +148,17 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   margin: 1em 0 1em 0;
+
+  input {
+    position: absolute;
+    top: -9999px;
+    color: red;
+  }
+  input:checked + label {
+    background-color: #4da1ff;
+    color: white;
+  }
+
   label {
     background-color: #e5e6e8;
     border: none;
@@ -162,15 +167,6 @@ img {
     font-size: 1em;
     font-weight: 500;
     padding: 1em 0.8em 1em 0.8em;
-
-    input {
-      visibility: hidden;
-      position: absolute;
-      color: red;
-      input:checked ~ #label {
-        color: red;
-      }
-    }
   }
 }
 
@@ -184,7 +180,7 @@ img {
     font-size: 1em;
     font-weight: 500;
     padding: 1.4em 1em 1.4em 1em;
-    margin-top: 1em;
+    margin-bottom: 4%;
   }
 }
 </style>
@@ -198,12 +194,30 @@ import { Carousel, Slide } from "vue-carousel";
 
 export default {
   name: "home",
+  data() {
+    return { checkedNames: [] };
+  },
+  mounted() {
+    if (localStorage.genres === "") {
+      this.checkedNames = localStorage.genres;
+    }
+
+    // localStorage.setItem("genres", this._data.checkedNames);
+  },
+  watch: {
+    checkedNames(newName) {
+      localStorage.genres = newName;
+    }
+  },
   methods: {
     nextSlide() {
       this.$refs.carousel.goToPage(this.$refs.carousel.getNextPage());
     },
     prevSlide() {
       this.$refs.carousel.goToPage(this.$refs.carousel.getPreviousPage());
+    },
+    persist() {
+      localStorage.genres = this.checkedNames;
     }
   },
   components: {
