@@ -183,7 +183,7 @@
   </section>
 </template>
 
-<style lang="sass">
+<style lang="sass" scoped>
 
 .alfred
     margin: 0
