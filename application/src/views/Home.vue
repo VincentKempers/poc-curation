@@ -45,6 +45,18 @@
         </div>
       </slide>
       <slide>
+        <div id="popup" v-show="isOpen">
+          <section id="container">
+            <img src="../assets/soloalfred.svg" alt="alfred">
+            <div>
+              <h3>Bedankt voor het downloaden!</h3>
+              <p>je bent nu officieel lid van de nieuwe boekhandel! Wij waarderen enorm dat je lid bent geworden bekijk onze evenementen! Oh en vergeet uw gratis €1.50 niet</p>
+              <router-link to="/dashboard">
+                <button class="blue_button">Jouw Dashboard</button>
+              </router-link>
+            </div>
+          </section>
+        </div>
         <div class="block">
           <h2>Wat voor boeken lees jij graag?</h2>
           <p>
@@ -78,7 +90,7 @@
           </div>
           <div class="buttons button_local">
             <button class="white_button" @click.prevent="prevSlide">Misschien later</button>
-            <button class="blue_button" @click="persist">Volgende</button>
+            <button class="blue_button" @click="persist" v-on:click="toggle()">Volgende</button>
           </div>
         </div>
       </slide>
@@ -133,13 +145,14 @@ img {
     padding-bottom: 1.4rem;
     padding: 0.8em 1.4em 0.8em 1.4em;
   }
-  .white_button {
-    background-color: #e5e6e8;
-  }
-  .blue_button {
-    background-color: #4da1ff;
-    color: white;
-  }
+}
+
+.white_button {
+  background-color: #e5e6e8;
+}
+.blue_button {
+  background-color: #4da1ff;
+  color: white;
 }
 
 .choices {
@@ -183,6 +196,53 @@ img {
     margin-bottom: 4%;
   }
 }
+
+#popup {
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: +999;
+
+  #container {
+    background-color: white;
+    width: 19em;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 15px;
+
+    img {
+      width: 30%;
+      position: relative;
+      margin-top: -3em;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p {
+        padding: 0 0.5em 0 0.5em;
+      }
+      button {
+        background-color: #4da1ff;
+        color: white;
+        border: none;
+        border-radius: 0.4em;
+        width: 70%;
+        font-size: 1em;
+        font-weight: 500;
+        padding: 1em 0.8em 1em 0.8em;
+        margin-top: 0.5em;
+      }
+    }
+  }
+}
 </style>
 
 
@@ -195,7 +255,7 @@ import { Carousel, Slide } from "vue-carousel";
 export default {
   name: "home",
   data() {
-    return { checkedNames: [] };
+    return { checkedNames: [], isOpen: false };
   },
   mounted() {
     if (localStorage.genres === "") {
@@ -218,6 +278,9 @@ export default {
     },
     persist() {
       localStorage.genres = this.checkedNames;
+    },
+    toggle() {
+      this.isOpen = !this.isOpen;
     }
   },
   components: {
