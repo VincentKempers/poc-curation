@@ -22,6 +22,6 @@ html {
   text-align: center;
   color: #2c3e50;
   max-width: 100vw;
-  max-height: 120vh;
+  max-height: 100vh;
 }
 </style>
