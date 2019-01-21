@@ -9,17 +9,17 @@
           <div class="information-pass">
             <div class="pass">
               <img src="../assets/actual-barcode.png" alt>
-              <span>0000000000</span>
+              <span>0000 0000 0000 000</span>
             </div>
             <div class="pass-info">
               <ul>
                 <li>
-                  <img src alt>
+                  <img src="../assets/user-icon.svg" alt>
                   <span>Vincent Kempers</span>
                 </li>
                 <li>
-                  <img src alt>
-                  <span>je hebt €2,50 aan punten</span>
+                  <img src="../assets/star-icon.svg" alt>
+                  <span>je hebt € 1,50</span>
                 </li>
               </ul>
             </div>
@@ -100,8 +100,8 @@ h3 {
           }
           span {
             text-align: left;
-            letter-spacing: 0.4em;
-            padding-left: 0.9em;
+            letter-spacing: 0.035em;
+            padding-left: 0.65em;
           }
         }
         .pass-info {
@@ -113,7 +113,14 @@ h3 {
             li {
               display: flex;
               flex-direction: row;
+              text-align: center;
               margin-top: 0.8em;
+              img {
+                height: 1em;
+                width: 1em;
+                margin: 0;
+                margin-right: 0.26em;
+              }
               span {
                 font-size: 0.7em;
               }
