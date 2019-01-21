@@ -229,16 +229,19 @@ img {
       p {
         padding: 0 0.5em 0 0.5em;
       }
-      button {
-        background-color: #4da1ff;
-        color: white;
-        border: none;
-        border-radius: 0.4em;
-        width: 70%;
-        font-size: 1em;
-        font-weight: 500;
-        padding: 1em 0.8em 1em 0.8em;
-        margin-top: 0.5em;
+      a {
+        width: 100%;
+        button {
+          background-color: #4da1ff;
+          color: white;
+          border: none;
+          border-radius: 0.4em;
+          width: 70%;
+          font-size: 1em;
+          font-weight: 500;
+          padding: 1em 0.8em 1em 0.8em;
+          margin-top: 0.5em;
+        }
       }
     }
   }
