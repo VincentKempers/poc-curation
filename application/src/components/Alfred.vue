@@ -1,171 +1,173 @@
 <template>
-  <section id="alfred">
-    <main class="wrapper ai-window">
-      <br>
-      <br>
-      <!-- Display Welcome Message -->
-      <div v-if="answers.length == 0 && online == true">
-        <h1 class="title mdc-typography--headline">
-          <img src alt>
-          {{config.locale.strings.welcomeTitle}}
-          <p class="mdc-typography--body2">{{config.locale.strings.welcomeDescription}}</p>
-        </h1>
-      </div>
+  <div id="chatbot">
+    <section id="alfred">
+      <main class="wrapper ai-window">
+        <br>
+        <br>
+        <!-- Display Welcome Message -->
+        <div v-if="answers.length == 0 && online == true">
+          <h1 class="title mdc-typography--headline">
+            <img src alt>
+            {{config.locale.strings.welcomeTitle}}
+            <p class="mdc-typography--body2">{{config.locale.strings.welcomeDescription}}</p>
+          </h1>
+        </div>
 
-      <!-- Display offline message -->
-      <div v-if="answers.length == 0 && online == false">
-        <h1 class="title mdc-typography--headline">
-          <div class="material-icons up">cloud_off</div>
-          <br>
-          <br>
-          {{config.locale.strings.offlineTitle}}
-          <p class="mdc-typography--body2">{{config.locale.strings.offlineDescription}}</p>
-        </h1>
-      </div>
+        <!-- Display offline message -->
+        <div v-if="answers.length == 0 && online == false">
+          <h1 class="title mdc-typography--headline">
+            <div class="material-icons up">cloud_off</div>
+            <br>
+            <br>
+            {{config.locale.strings.offlineTitle}}
+            <p class="mdc-typography--body2">{{config.locale.strings.offlineDescription}}</p>
+          </h1>
+        </div>
 
-      <!-- Chat window -->
-      <table v-for="a in answers" :key="a" class="chat-window">
-        <!-- Your messages -->
-        <tr>
-          <td class="bubble">{{a.result.resolvedQuery}}</td>
-        </tr>
+        <!-- Chat window -->
+        <table v-for="a in answers" :key="a" class="chat-window">
+          <!-- Your messages -->
+          <tr>
+            <td class="bubble">{{a.result.resolvedQuery}}</td>
+          </tr>
 
-        <!-- Dialogflow messages -->
-        <tr>
-          <td>
-            <!-- Bot message types / Speech -->
-            <div
-              v-if="a.result.fulfillment.speech"
-              class="bubble bot"
-            >{{a.result.fulfillment.speech}}</div>
+          <!-- Dialogflow messages -->
+          <tr>
+            <td>
+              <!-- Bot message types / Speech -->
+              <div
+                v-if="a.result.fulfillment.speech"
+                class="bubble bot"
+              >{{a.result.fulfillment.speech}}</div>
 
-            <!-- Google Assistant output -->
-            <div v-for="r in a.result.fulfillment.messages" :key="r">
-              <!-- Bot message types / Card -->
-              <div class="mdc-card" v-if="r.type == 'basic_card'">
-                <img
-                  :title="r.image.accessibilityText"
-                  :alt="r.image.accessibilityText"
-                  class="mdc-card__media-item"
-                  :src="r.image.url"
-                  v-if="r.image"
-                >
-                <section class="mdc-card__primary">
-                  <h1 class="mdc-card__title">{{r.title}}</h1>
-                  <br>
-                  <h2 class="mdc-card__subtitle">{{r.subtitle}}</h2>
-                </section>
-                <section class="mdc-card__supporting-text">{{r.formattedText}}</section>
-                <section class="mdc-card__actions" v-for="button in r.buttons" :key="button">
-                  <a
-                    class="mdc-button mdc-button--compact themed mdc-card__action"
-                    target="_blank"
-                    :href="button.openUrlAction.url"
+              <!-- Google Assistant output -->
+              <div v-for="r in a.result.fulfillment.messages" :key="r">
+                <!-- Bot message types / Card -->
+                <div class="mdc-card" v-if="r.type == 'basic_card'">
+                  <img
+                    :title="r.image.accessibilityText"
+                    :alt="r.image.accessibilityText"
+                    class="mdc-card__media-item"
+                    :src="r.image.url"
+                    v-if="r.image"
                   >
-                    {{button.title}}
+                  <section class="mdc-card__primary">
+                    <h1 class="mdc-card__title">{{r.title}}</h1>
+                    <br>
+                    <h2 class="mdc-card__subtitle">{{r.subtitle}}</h2>
+                  </section>
+                  <section class="mdc-card__supporting-text">{{r.formattedText}}</section>
+                  <section class="mdc-card__actions" v-for="button in r.buttons" :key="button">
+                    <a
+                      class="mdc-button mdc-button--compact themed mdc-card__action"
+                      target="_blank"
+                      :href="button.openUrlAction.url"
+                    >
+                      {{button.title}}
+                      <i class="material-icons openlink">open_in_new</i>
+                    </a>
+                  </section>
+                </div>
+
+                <!-- Bot message types / Carousel Card -->
+                <div class="slider" v-if="r.type == 'carousel_card'">
+                  <carousel
+                    :perPage="1"
+                    :navigationEnabled="true"
+                    :paginationEnabled="false"
+                    navigationNextLabel="<button class='mdc-fab mdc-fab--mini material-icons rightnav'><span class='mdc-fab__icon'>keyboard_arrow_right</span></button>"
+                    navigationPrevLabel="<button class='mdc-fab mdc-fab--mini material-icons leftnav'><span class='mdc-fab__icon'>keyboard_arrow_left</span></button>"
+                    :navigationClickTargetSize="0"
+                    :loop="true"
+                  >
+                    <slide v-for="item in r.items" :key="item.id">
+                      <div class="mdc-card slide">
+                        <img class="mdc-card__media-item" :src="item.image.url" v-if="item.image">
+                        <section class="mdc-card__primary">
+                          <h1
+                            class="mdc-card__title themed"
+                            @click="autosubmit(item.optionInfo.key)"
+                          >{{item.title}}</h1>
+                        </section>
+                        <section class="mdc-card__supporting-text">{{item.description}}</section>
+                      </div>
+                    </slide>
+                  </carousel>
+                </div>
+
+                <!-- Bot message types / List -->
+                <div class="mdc-list-group mdc-card" v-if="r.type == 'list_card'">
+                  <h3 class="mdc-list-group__subheader">{{r.title}}</h3>
+                  <ul
+                    class="mdc-list mdc-list--two-line mdc-list--avatar-list"
+                    v-for="item in r.items"
+                    v-bind:key="item"
+                    @click="autosubmit(item.optionInfo.key)"
+                  >
+                    <li class="mdc-list-item">
+                      <img
+                        :title="item.image.accessibilityText"
+                        :alt="item.image.accessibilityText"
+                        class="mdc-list-item__start-detail"
+                        width="56"
+                        height="56"
+                        :src="item.image.url"
+                        v-if="item.image"
+                      >
+                      <span class="mdc-list-item__text">
+                        {{item.title}}
+                        <span
+                          class="mdc-list-item__text__secondary"
+                        >{{item.description}}</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Bot message types / Link Chip -->
+                <div v-if="r.type == 'link_out_chip'" class="chips">
+                  <a class="suggestion link" :href="r.url" target="_blank">
+                    {{r.destinationName}}
                     <i class="material-icons openlink">open_in_new</i>
                   </a>
-                </section>
-              </div>
+                </div>
 
-              <!-- Bot message types / Carousel Card -->
-              <div class="slider" v-if="r.type == 'carousel_card'">
-                <carousel
-                  :perPage="1"
-                  :navigationEnabled="true"
-                  :paginationEnabled="false"
-                  navigationNextLabel="<button class='mdc-fab mdc-fab--mini material-icons rightnav'><span class='mdc-fab__icon'>keyboard_arrow_right</span></button>"
-                  navigationPrevLabel="<button class='mdc-fab mdc-fab--mini material-icons leftnav'><span class='mdc-fab__icon'>keyboard_arrow_left</span></button>"
-                  :navigationClickTargetSize="0"
-                  :loop="true"
-                >
-                  <slide v-for="item in r.items" :key="item.id">
-                    <div class="mdc-card slide">
-                      <img class="mdc-card__media-item" :src="item.image.url" v-if="item.image">
-                      <section class="mdc-card__primary">
-                        <h1
-                          class="mdc-card__title themed"
-                          @click="autosubmit(item.optionInfo.key)"
-                        >{{item.title}}</h1>
-                      </section>
-                      <section class="mdc-card__supporting-text">{{item.description}}</section>
-                    </div>
-                  </slide>
-                </carousel>
-              </div>
+                <!-- Bot message types / Suggestion Chip -->
+                <div v-if="r.type == 'suggestion_chips'" class="chips">
+                  <div
+                    class="suggestion"
+                    @click="autosubmit(s.title)"
+                    v-for="s in r.suggestions"
+                    :key="s"
+                  >{{s.title}}</div>
+                </div>
 
-              <!-- Bot message types / List -->
-              <div class="mdc-list-group mdc-card" v-if="r.type == 'list_card'">
-                <h3 class="mdc-list-group__subheader">{{r.title}}</h3>
-                <ul
-                  class="mdc-list mdc-list--two-line mdc-list--avatar-list"
-                  v-for="item in r.items"
-                  v-bind:key="item"
-                  @click="autosubmit(item.optionInfo.key)"
-                >
-                  <li class="mdc-list-item">
-                    <img
-                      :title="item.image.accessibilityText"
-                      :alt="item.image.accessibilityText"
-                      class="mdc-list-item__start-detail"
-                      width="56"
-                      height="56"
-                      :src="item.image.url"
-                      v-if="item.image"
-                    >
-                    <span class="mdc-list-item__text">
-                      {{item.title}}
-                      <span
-                        class="mdc-list-item__text__secondary"
-                      >{{item.description}}</span>
-                    </span>
-                  </li>
-                </ul>
+                <!-- Bot message types / Google Suggestion Chip -->
+                <div v-if="r.unknown == true" class="google-chip chips">
+                  <a
+                    class="suggestion"
+                    :href="'https://www.google.com/search?q=' + r.text"
+                    target="_blank"
+                  >
+                    Search for "{{r.text}}" on Google
+                    <i class="material-icons openlink">search</i>
+                  </a>
+                </div>
               </div>
+            </td>
+          </tr>
+        </table>
 
-              <!-- Bot message types / Link Chip -->
-              <div v-if="r.type == 'link_out_chip'" class="chips">
-                <a class="suggestion link" :href="r.url" target="_blank">
-                  {{r.destinationName}}
-                  <i class="material-icons openlink">open_in_new</i>
-                </a>
-              </div>
-
-              <!-- Bot message types / Suggestion Chip -->
-              <div v-if="r.type == 'suggestion_chips'" class="chips">
-                <div
-                  class="suggestion"
-                  @click="autosubmit(s.title)"
-                  v-for="s in r.suggestions"
-                  :key="s"
-                >{{s.title}}</div>
-              </div>
-
-              <!-- Bot message types / Google Suggestion Chip -->
-              <div v-if="r.unknown == true" class="google-chip chips">
-                <a
-                  class="suggestion"
-                  :href="'https://www.google.com/search?q=' + r.text"
-                  target="_blank"
-                >
-                  Search for "{{r.text}}" on Google
-                  <i class="material-icons openlink">search</i>
-                </a>
-              </div>
-            </div>
-          </td>
-        </tr>
-      </table>
-
-      <br>
-      <!-- <p class="copyright" v-if="answers.length > 0">
+        <br>
+        <!-- <p class="copyright" v-if="answers.length > 0">
         Proudly powered by
         <a href="https://ushakov.co">Ushakov</a> &
         <a href="https://dialogflow.com">Dialogflow</a>
-      </p>-->
-      <a id="bottom"></a>
-    </main>
-    <!-- The input -->
+        </p>-->
+        <a id="bottom"></a>
+      </main>
+      <!-- The input -->
+    </section>
     <div class="query">
       <div class="wrapper" v-if="micro == false">
         <input
@@ -180,13 +182,13 @@
         >
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <style lang="sass" scoped>
 
 .alfred
-    margin: 0
+    // margin: 0
     background-color: #f8fbff
     font-family: 'Roboto', 'Google Sans', sans-serif
 
@@ -200,13 +202,14 @@
 
 .wrapper.ai-window
     padding: 1rem
-    min-height: 11vh
+    max-height: 11vh !important
 
 .up
     font-size: 32px
     background-color: white
     padding: 10px
     border-radius: 50%
+
 
 .title
     vertical-align: middle
@@ -217,13 +220,14 @@
 
 .query
     padding: 16px 0px
-    background-color: white
+    background-color: lightgray
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
-    position: fixed;
-    top: 87%
-    bottom: 0;
-    left: 0;
+    position: fixed
+    top: 82%
+    bottom: 0
+    left: 0
     width: 100%
+    margin-bottom: 2em
 
 .queryform
     // border: 0
@@ -254,6 +258,10 @@
 
 .chat-window
     width: 100%
+    height: 50%
+
+.chat-window:last-of-type
+    margin-bottom: 8em
 
 .bubble
     max-width: 300px
