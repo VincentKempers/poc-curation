@@ -28,6 +28,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-top: 1px solid lightgray;
   a {
     font-weight: bold;
     color: #2c3e50;

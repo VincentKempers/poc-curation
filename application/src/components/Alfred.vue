@@ -219,8 +219,8 @@
     margin-top: 30%
 
 .query
-    padding: 16px 0px
-    background-color: lightgray
+    padding: 12px 0px
+    background-color: white
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
     position: fixed
     top: 82%
@@ -228,15 +228,18 @@
     left: 0
     width: 100%
     margin-bottom: 2em
+    
 
 .queryform
-    // border: 0
-    width: 100% - 20%
+    width: 100% - 15%
+    padding: .4em;
     margin-left: 0
     font-size: 16px
     outline: none
     color: rgba(0,0,0,0.8)
     font-weight: 500
+    border: 1px solid lightgray
+    border-radius: 10px
     
 
     @media screen and (max-width: 320px)
