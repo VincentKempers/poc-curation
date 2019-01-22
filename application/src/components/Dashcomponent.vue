@@ -41,6 +41,70 @@
       <div class="events">
         <img src="../assets/calendar.png" alt="events icon">
         <h3>Evenementen</h3>
+        <div class="sidescroll">
+          <ul>
+            <li>
+              <div class="ticket">
+                <section id="event">
+                  <span>evenement</span>
+                  <h4>naam</h4>
+                </section>
+                <section id="when">
+                  <span>wanneer</span>
+                  <h4>1 Februari, 2019 15:00</h4>
+                </section>
+              </div>
+            </li>
+            <li>
+              <div class="ticket">
+                <section id="event">
+                  <span>evenement</span>
+                  <h4>naam</h4>
+                </section>
+                <section id="when">
+                  <span>wanneer</span>
+                  <h4>1 Februari, 2019 15:00</h4>
+                </section>
+              </div>
+            </li>
+            <li>
+              <div class="ticket">
+                <section id="event">
+                  <span>evenement</span>
+                  <h4>naam</h4>
+                </section>
+                <section id="when">
+                  <span>wanneer</span>
+                  <h4>1 Februari, 2019 15:00</h4>
+                </section>
+              </div>
+            </li>
+            <li>
+              <div class="ticket">
+                <section id="event">
+                  <span>evenement</span>
+                  <h4>naam</h4>
+                </section>
+                <section id="when">
+                  <span>wanneer</span>
+                  <h4>1 Februari, 2019 15:00</h4>
+                </section>
+              </div>
+            </li>
+            <li>
+              <div class="ticket">
+                <section id="event">
+                  <span>evenement</span>
+                  <h4>naam</h4>
+                </section>
+                <section id="when">
+                  <span>wanneer</span>
+                  <h4>1 Februari, 2019 15:00</h4>
+                </section>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -56,9 +120,9 @@ h3 {
 
 .gridblocks {
   display: grid;
-  height: 80vh;
+  height: 82vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1.3fr 1fr 1.1fr;
+  grid-template-rows: 1.3fr 0.9fr 1.1fr;
   grid-template-areas: "bc1 bc1 bc1 bc1" "bo1 bo1 eb1 eb1" "ev1 ev1 ev1 ev1";
   grid-gap: 0.3em;
   .barcode {
@@ -138,7 +202,7 @@ h3 {
     padding-right: 1em;
     text-align: left;
     img {
-      width: 1.45em;
+      width: 1em;
       margin-top: 0.8em;
     }
     span {
@@ -155,7 +219,7 @@ h3 {
     padding-right: 1em;
     text-align: left;
     img {
-      width: 1.2em;
+      width: 1em;
       margin-top: 0.8em;
     }
   }
@@ -164,11 +228,58 @@ h3 {
     background-color: #4da1ff;
     border-radius: 1em;
     padding-left: 1em;
-    padding-right: 1em;
+    // padding-right: 1em;
     text-align: left;
     img {
-      width: 1.2em;
+      width: 0.8em;
       margin-top: 0.8em;
+    }
+    .sidescroll {
+      max-width: 100%;
+      border-radius: 5px;
+      ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin: 0;
+        margin-top: 0.4em;
+        padding: 0;
+        padding-right: 1em;
+        overflow-x: scroll;
+        li {
+          margin-right: 0.5em;
+          .ticket {
+            padding: 0.5em;
+            border-radius: 5px;
+            background-color: white;
+            width: 10em;
+            margin-right: 0.7em;
+          }
+          #event {
+            margin: 0;
+            margin-bottom: 0.5em;
+            span {
+              font-size: 0.6em;
+              text-transform: uppercase;
+            }
+            h4 {
+              margin: 0;
+            }
+          }
+          #when {
+            margin: 0;
+            span {
+              font-size: 0.6em;
+              text-transform: uppercase;
+            }
+            h4 {
+              margin: 0;
+            }
+          }
+          #button {
+          }
+        }
+      }
     }
   }
 }

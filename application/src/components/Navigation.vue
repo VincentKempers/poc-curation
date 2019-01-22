@@ -1,14 +1,24 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link>|
-    <router-link to="/about">About</router-link>|
-    <router-link to="/alfred">Alfred</router-link>
+    <router-link to="/dashboard">
+      <img src="../assets/Icon/Compass.png" alt>
+    </router-link>
+    <router-link to="/about">
+      <img src="../assets/Icon/Bell.png" alt>
+    </router-link>
+    <router-link to="/alfred">
+      <img src="../assets/Icon/Heart.png" alt>
+    </router-link>
+    <router-link to="/alfred">
+      <img src="../assets/Icon/User.png" alt>
+    </router-link>
   </div>
 </template>
 
 <style lang="scss" scoped>
 #nav {
-  background-color: #e1e1e1;
+  background-color: #ffffff;
+  // background-color: black;
   padding: 15px;
   position: fixed;
   bottom: 0;
@@ -21,8 +31,12 @@
   a {
     font-weight: bold;
     color: #2c3e50;
+    margin: 0 1em 0 1em;
     &.router-link-exact-active {
       color: #42b983;
+    }
+    img {
+      width: 1.5em;
     }
   }
 }
