@@ -128,7 +128,7 @@ h3 {
   .barcode {
     grid-area: bc1;
     background-color: #4da1ff;
-    border-radius: 1em;
+    border-radius: 5px;
     padding-left: 1em;
     padding-right: 1em;
     text-align: left;
@@ -197,7 +197,7 @@ h3 {
   .bookscan {
     grid-area: bo1;
     background-color: #4da1ff;
-    border-radius: 1em;
+    border-radius: 5px;
     padding-left: 1em;
     padding-right: 1em;
     text-align: left;
@@ -214,7 +214,7 @@ h3 {
   .ebook {
     grid-area: eb1;
     background-color: #4da1ff;
-    border-radius: 1em;
+    border-radius: 5px;
     padding-left: 1em;
     padding-right: 1em;
     text-align: left;
@@ -226,7 +226,7 @@ h3 {
   .events {
     grid-area: ev1;
     background-color: #4da1ff;
-    border-radius: 1em;
+    border-radius: 5px;
     padding-left: 1em;
     // padding-right: 1em;
     text-align: left;
@@ -249,7 +249,7 @@ h3 {
         li {
           margin-right: 0.5em;
           .ticket {
-            padding: 0.5em;
+            padding: 0.4em;
             border-radius: 5px;
             background-color: white;
             width: 10em;
@@ -275,8 +275,6 @@ h3 {
             h4 {
               margin: 0;
             }
-          }
-          #button {
           }
         }
       }
