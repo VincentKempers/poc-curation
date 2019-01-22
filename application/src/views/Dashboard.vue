@@ -12,7 +12,7 @@ input {
   width: 80%;
   border: none;
   box-shadow: 0px 10px 10px rgba(216, 232, 253, 0.203635);
-  margin-bottom: 2em;
+  margin-bottom: 1.4em;
 }
 </style>
 
