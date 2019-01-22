@@ -40,7 +40,9 @@
         <h3>Mijn naam is Alfred</h3>
         <p>Ik ben hier om je te helpen met al jouw vragen, je te sturen binnen de app en om zo nu en dan een boek aan te raden! Zou je mij kunnen vertellen wat voor boeken je graag leest?</p>
         <div class="buttons button_local">
-          <button class="white_button" @click.prevent="prevSlide">Misschien later</button>
+          <router-link to="/dashboard">
+            <button class="white_button">Misschien later</button>
+          </router-link>
           <button class="blue_button" @click.prevent="nextSlide">Ja natuurlijk!</button>
         </div>
       </slide>
@@ -89,7 +91,9 @@
             <label for="kookboeken">Kookboeken</label>
           </div>
           <div class="buttons button_local">
-            <button class="white_button" @click.prevent="prevSlide">Misschien later</button>
+            <a href="/dashboard">
+              <button class="white_button">Misschien later</button>
+            </a>
             <button class="blue_button" @click="persist" v-on:click="toggle()">Volgende</button>
           </div>
         </div>
