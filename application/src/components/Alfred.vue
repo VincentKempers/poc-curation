@@ -5,12 +5,10 @@
         <br>
         <br>
         <!-- Display Welcome Message -->
-        <div v-if="answers.length == 0 && online == true">
-          <h1 class="title mdc-typography--headline">
-            <img src alt>
-            {{config.locale.strings.welcomeTitle}}
-            <p class="mdc-typography--body2">{{config.locale.strings.welcomeDescription}}</p>
-          </h1>
+        <div id="welcome-text" v-if="answers.length == 0 && online == true">
+          <h1 class="title mdc-typography--headline">{{config.locale.strings.welcomeTitle}}</h1>
+          <img src="../assets/soloalfred.svg" alt>
+          <p class="mdc-typography--body2">{{config.locale.strings.welcomeDescription}}</p>
         </div>
 
         <!-- Display offline message -->
@@ -191,6 +189,9 @@
     // margin: 0
     background-color: #f8fbff
     font-family: 'Roboto', 'Google Sans', sans-serif
+
+#welcome-text > img
+    width: 7em;
 
 .themed
     color: red
