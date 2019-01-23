@@ -21,7 +21,7 @@ _(A list of everything to do and a roadmap)_
 _(A roadmap of this project + Image of github projects)_
 
 Here you can find my roadmap:
-[]()
+[Click here to check my roadmap/Github projects](https://github.com/VincentKempers/poc-curation/projects/1)
 
 # Tutorials
 
