@@ -18,7 +18,7 @@ You can start the VueJS by starting up a node enviroment and installing the CLI 
 
 ### Setup
 
-`npm`
+`npm` node package manager will download the vue js and vue-cli.
 
 ### Data
 
@@ -37,6 +37,8 @@ You can start the VueJS by starting up a node enviroment and installing the CLI 
 `Method: {}` you can store functions that run immediatly and most of the time they run immediatly. You can do things immediatly.
 
 ## Hooks
+
+suprisingly didn't learn anything about hooks. Or Webhooks for that matter. I guess I picked the wrong tutorials :laugh:
 
 ### beforeCreate
 
