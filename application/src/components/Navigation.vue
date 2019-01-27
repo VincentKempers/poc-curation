@@ -3,13 +3,13 @@
     <router-link to="/dashboard">
       <img src="../assets/Icon/Compass.png" alt>
     </router-link>
-    <router-link to="/about">
+    <router-link to="/alfred">
       <img src="../assets/Icon/Bell.png" alt>
     </router-link>
     <router-link to="/alfred">
       <img src="../assets/Icon/Heart.png" alt>
     </router-link>
-    <router-link to="/alfred">
+    <router-link to="/portemonnee">
       <img src="../assets/Icon/User.png" alt>
     </router-link>
   </div>
@@ -18,7 +18,6 @@
 <style lang="scss" scoped>
 #nav {
   background-color: #ffffff;
-  // background-color: black;
   padding: 15px;
   position: fixed;
   bottom: 0;

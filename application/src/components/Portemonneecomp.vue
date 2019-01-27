@@ -22,11 +22,11 @@
               <ul>
                 <li>
                   <img src="../assets/user-icon.svg" alt>
-                  <span>log nu in</span>
+                  <span>Meld je nu aan</span>
                 </li>
                 <li>
                   <img src="../assets/star-icon.svg" alt>
-                  <span>je hebt € 1,50</span>
+                  <span>€ 1,50</span>
                 </li>
               </ul>
             </div>
@@ -74,9 +74,9 @@ h3 {
 
 .gridblocks {
   display: grid;
-  height: 86vh;
+  // height: 86vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.7fr 1.6fr 1fr;
+  grid-template-rows: 0.7fr 1fr 1fr;
   grid-template-areas: "bo1 bo1 bo1 bo1" "bc1 bc1 bc1 bc1" "ev1 ev1 ev1 ev1";
   grid-gap: 0.3em;
   margin-bottom: 6em;
