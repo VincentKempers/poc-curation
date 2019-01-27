@@ -29,6 +29,31 @@
           <span>meer ></span>
         </section>
       </div>
+      <div class="books">
+        <h3>Genre</h3>
+        <ul>
+          <li>
+            <img src alt>
+            <span>bookname</span>
+          </li>
+          <li>
+            <img src alt>
+            <span>bookname</span>
+          </li>
+          <li>
+            <img src alt>
+            <span>bookname</span>
+          </li>
+          <li>
+            <img src alt>
+            <span>bookname</span>
+          </li>
+          <li>
+            <img src alt>
+            <span>bookname</span>
+          </li>
+        </ul>
+      </div>
       <div class="bookscan">
         <img src="../assets/barcode.svg" alt="barcode scanner">
         <h3>Boekenscanner</h3>
@@ -120,11 +145,12 @@ h3 {
 
 .gridblocks {
   display: grid;
-  height: 82vh;
+  height: 100vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1.3fr 0.9fr 1.1fr;
-  grid-template-areas: "bc1 bc1 bc1 bc1" "bo1 bo1 eb1 eb1" "ev1 ev1 ev1 ev1";
+  grid-template-rows: 1.3fr 1fr 1fr 1fr;
+  grid-template-areas: "bc1 bc1 bc1 bc1" "books books books books" "bo1 bo1 eb1 eb1" "ev1 ev1 ev1 ev1";
   grid-gap: 0.3em;
+  margin-bottom: 6em;
   .barcode {
     grid-area: bc1;
     background-color: #4da1ff;
@@ -191,6 +217,27 @@ h3 {
             }
           }
         }
+      }
+    }
+  }
+  .books {
+    grid-area: books;
+    padding-left: 1em;
+    padding-right: 1em;
+    h3 {
+      color: black;
+    }
+    ul {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      overflow-x: scroll;
+      list-style: none;
+      padding-left: 0;
+      li {
+        display: flex;
+        flex-direction: column;
       }
     }
   }

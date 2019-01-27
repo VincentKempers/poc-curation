@@ -1,0 +1,31 @@
+{
+  "Kinderboeken": {
+    "books": [
+      {
+        "name": "Mary Poppins",
+        "img": "../assets/books/b-marypoppins.jpg",
+        "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
+      },
+      {
+        "name": "Mijn kleine vogelboek",
+        "img": "../assets/books/b-vogelboek.jpg",
+        "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
+      },
+      {
+        "name": "Het Mysterieuze horloge van Walker & Dawn",
+        "img": "",
+        "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
+      },
+      {
+        "name": "Het Mysterieuze horloge van Walker & Dawn",
+        "img": "",
+        "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
+      },
+      {
+        "name": "Het Mysterieuze horloge van Walker & Dawn",
+        "img": "",
+        "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
+      }
+    ]
+  }
+}
