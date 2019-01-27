@@ -146,6 +146,7 @@ h3 {
     padding-right: 1em;
     text-align: left;
     text-decoration: none;
+    color: black;
     img {
       width: 1em;
       margin-top: 0.8em;
