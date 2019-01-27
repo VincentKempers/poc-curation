@@ -15,38 +15,28 @@
               <ul>
                 <li>
                   <img src="../assets/user-icon.svg" alt>
-                  <span>Vincent Kempers</span>
+                  <span>Meld je nu aan</span>
                 </li>
                 <li>
                   <img src="../assets/star-icon.svg" alt>
-                  <span>je hebt € 1,50</span>
+                  <span>€ 1,50</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
         <section class="bump">
-          <span>meer ></span>
+          <span>meer</span>
         </section>
       </router-link>
       <div class="books">
-        <h3>Genre</h3>
-        <ul>
-          <li>
-            <img src="../assets/books/b-fiftysg.jpg" alt="fiftyshadesofgray">
-            <span>Fifty shades of Grey</span>
-          </li>
-          <li>
-            <img src="../assets/books/b-fiftysg.jpg" alt="fiftyshadesofgray">
-            <span>Fifty shades of Grey</span>
-          </li>
-          <li>
-            <img src="../assets/books/b-fiftysg.jpg" alt="fiftyshadesofgray">
-            <span>Fifty shades of Grey</span>
-          </li>
-          <li>
-            <img src="../assets/books/b-fiftysg.jpg" alt="fiftyshadesofgray">
-            <span>Fifty shades of Grey</span>
+        <h3>{{checkedNames}}</h3>
+        <ul id="books">
+          <li :key="data" v-for="data in finalBook">
+            <a :href="data.url">
+              <img :src="require(`@/assets/books/${data.img}.jpg`)" :alt="data.name">
+              <span>{{data.name}}</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -68,11 +58,11 @@
               <div class="ticket">
                 <section id="event">
                   <span>evenement</span>
-                  <h4>naam</h4>
+                  <h5>schrijverspitch bij Monique</h5>
                 </section>
                 <section id="when">
                   <span>wanneer</span>
-                  <h4>1 Februari, 2019 15:00</h4>
+                  <h4>2 Februari, 2019 15:00</h4>
                 </section>
               </div>
             </li>
@@ -80,11 +70,11 @@
               <div class="ticket">
                 <section id="event">
                   <span>evenement</span>
-                  <h4>naam</h4>
+                  <h5>Voorleesochtend:</h5>
                 </section>
                 <section id="when">
                   <span>wanneer</span>
-                  <h4>1 Februari, 2019 15:00</h4>
+                  <h4>2 Februari, 2019 15:00</h4>
                 </section>
               </div>
             </li>
@@ -92,11 +82,11 @@
               <div class="ticket">
                 <section id="event">
                   <span>evenement</span>
-                  <h4>naam</h4>
+                  <h5>Feestlijke boekpresentatie</h5>
                 </section>
                 <section id="when">
                   <span>wanneer</span>
-                  <h4>1 Februari, 2019 15:00</h4>
+                  <h4>3 Februari, 2019 15:00</h4>
                 </section>
               </div>
             </li>
@@ -104,11 +94,11 @@
               <div class="ticket">
                 <section id="event">
                   <span>evenement</span>
-                  <h4>naam</h4>
+                  <h5>De Nieuwe Leeskring</h5>
                 </section>
                 <section id="when">
                   <span>wanneer</span>
-                  <h4>1 Februari, 2019 15:00</h4>
+                  <h4>4 Februari, 2019 15:00</h4>
                 </section>
               </div>
             </li>
@@ -116,11 +106,11 @@
               <div class="ticket">
                 <section id="event">
                   <span>evenement</span>
-                  <h4>naam</h4>
+                  <h5>Boekbespreking</h5>
                 </section>
                 <section id="when">
                   <span>wanneer</span>
-                  <h4>1 Februari, 2019 15:00</h4>
+                  <h4>6 Februari, 2019 15:00</h4>
                 </section>
               </div>
             </li>
@@ -240,6 +230,13 @@ h3 {
         display: flex;
         flex-direction: column;
         margin-right: 2.8em;
+        a {
+          color: black;
+          text-decoration: none;
+        }
+        &:visited {
+          color: black;
+        }
         img {
           width: 5.5em;
         }
@@ -313,6 +310,9 @@ h3 {
               font-size: 0.6em;
               text-transform: uppercase;
             }
+            h5 {
+              margin: 0;
+            }
             h4 {
               margin: 0;
             }
@@ -324,6 +324,9 @@ h3 {
               text-transform: uppercase;
             }
             h4 {
+              margin: 0;
+            }
+            h5 {
               margin: 0;
             }
           }
@@ -346,7 +349,34 @@ h3 {
 </style>
 
 <script>
+import json from "../data/data.json";
+
 export default {
-  name: "Dash"
+  name: "Dash",
+  data() {
+    return {
+      checkedNames: [],
+      allBooks: json,
+      finalBook: {}
+    };
+  },
+  mounted() {
+    if (localStorage.getItem("genres")) {
+      try {
+        var pickedGenre = localStorage.getItem("genres");
+        this.checkedNames = localStorage.getItem("genres");
+        this.allBooks.forEach(element => {
+          this.finalBook = element[`${pickedGenre}`].books;
+        });
+      } catch (e) {
+        this.checkedNames = "Top 5 boeken";
+      }
+    }
+  },
+  watch: {
+    genre(newName) {
+      localStorage.genres = newName;
+    }
+  }
 };
 </script>
