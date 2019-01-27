@@ -3,6 +3,8 @@ import Router from "vue-router";
 import Home from "./views/Home.vue";
 import Alfred from "./views/Chatboard.vue";
 import Dashboard from "./views/Dashboard.vue";
+import Promo from "./views/Promo.vue";
+import Promodashboard from "./views/Promodashboard.vue";
 
 Vue.use(Router);
 
@@ -33,6 +35,16 @@ export default new Router({
       path: "/dashboard",
       name: "Dashboard",
       component: Dashboard
+    },
+    {
+      path: "/promo",
+      name: "Promo",
+      component: Promo
+    },
+    {
+      path: "/promodashboard",
+      name: "PromoDash",
+      component: Promodashboard
     }
   ]
 });

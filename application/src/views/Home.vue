@@ -51,8 +51,8 @@
           <section id="container">
             <img src="../assets/soloalfred.svg" alt="alfred">
             <div>
-              <h3>Bedankt voor het downloaden!</h3>
-              <p>je bent nu officieel lid van de nieuwe boekhandel! Wij waarderen enorm dat je lid bent geworden bekijk onze evenementen! Oh en vergeet uw gratis €1.50 niet</p>
+              <h3>Perfect, dankjewel!</h3>
+              <p>Je selectie is gemaakt, ik zal je persoonlijke aanbiedingen en boeken aanraden. Je kunt je keuze later altijd nog aanpassen in de instellingen!</p>
               <router-link to="/dashboard">
                 <button class="blue_button">Jouw Dashboard</button>
               </router-link>
