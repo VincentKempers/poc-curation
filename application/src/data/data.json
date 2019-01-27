@@ -1,173 +1,186 @@
-{
-  "Kinderboeken": {
-    "books": [
-      {
-        "name": "Mary Poppins",
-        "img": "../assets/books/b-marypoppins.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
-      },
-      {
-        "name": "Mijn kleine vogelboek",
-        "img": "../assets/books/b-vogelboek.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
-      },
-      {
-        "name": "Het Mysterieuze horloge van Walker & Dawn",
-        "img": "../assets/books/b-mysterieuzehorloge.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
-      }
-    ]
-  },
-  "Detective": {
-    "books": [
-      {
-        "name": "Mary Poppins",
-        "img": "../assets/books/b-marypoppins.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
-      },
-      {
-        "name": "Mijn kleine vogelboek",
-        "img": "../assets/books/b-vogelboek.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
-      },
-      {
-        "name": "Het Mysterieuze horloge van Walker & Dawn",
-        "img": "../assets/books/b-mysterieuzehorloge.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
-      }
-    ]
-  },
-  "Science Fiction": {
-    "books": [
-      {
-        "name": "Mary Poppins",
-        "img": "../assets/books/b-marypoppins.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
-      },
-      {
-        "name": "Mijn kleine vogelboek",
-        "img": "../assets/books/b-vogelboek.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
-      },
-      {
-        "name": "Het Mysterieuze horloge van Walker & Dawn",
-        "img": "../assets/books/b-mysterieuzehorloge.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
-      }
-    ]
-  },
-  "Biografie": {
-    "books": [
-      {
-        "name": "Mary Poppins",
-        "img": "../assets/books/b-marypoppins.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
-      },
-      {
-        "name": "Mijn kleine vogelboek",
-        "img": "../assets/books/b-vogelboek.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
-      },
-      {
-        "name": "Het Mysterieuze horloge van Walker & Dawn",
-        "img": "../assets/books/b-mysterieuzehorloge.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
-      }
-    ]
-  },
-  "Fantasy": {
-    "books": [
-      {
-        "name": "Mary Poppins",
-        "img": "../assets/books/b-marypoppins.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
-      },
-      {
-        "name": "Mijn kleine vogelboek",
-        "img": "../assets/books/b-vogelboek.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
-      },
-      {
-        "name": "Het Mysterieuze horloge van Walker & Dawn",
-        "img": "../assets/books/b-mysterieuzehorloge.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
-      }
-    ]
-  },
-  "Thriller": {
-    "books": [
-      {
-        "name": "Mary Poppins",
-        "img": "../assets/books/b-marypoppins.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
-      },
-      {
-        "name": "Mijn kleine vogelboek",
-        "img": "../assets/books/b-vogelboek.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
-      },
-      {
-        "name": "Het Mysterieuze horloge van Walker & Dawn",
-        "img": "../assets/books/b-mysterieuzehorloge.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
-      }
-    ]
-  },
-  "Oorlog": {
-    "books": [
-      {
-        "name": "Mary Poppins",
-        "img": "../assets/books/b-marypoppins.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
-      },
-      {
-        "name": "Mijn kleine vogelboek",
-        "img": "../assets/books/b-vogelboek.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
-      },
-      {
-        "name": "Het Mysterieuze horloge van Walker & Dawn",
-        "img": "../assets/books/b-mysterieuzehorloge.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
-      }
-    ]
-  },
-  "Romans": {
-    "books": [
-      {
-        "name": "Mary Poppins",
-        "img": "../assets/books/b-marypoppins.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
-      },
-      {
-        "name": "Mijn kleine vogelboek",
-        "img": "../assets/books/b-vogelboek.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
-      },
-      {
-        "name": "Het Mysterieuze horloge van Walker & Dawn",
-        "img": "../assets/books/b-mysterieuzehorloge.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
-      }
-    ]
-  },
-  "Kookboeken": {
-    "books": [
-      {
-        "name": "Mary Poppins",
-        "img": "../assets/books/b-marypoppins.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
-      },
-      {
-        "name": "Mijn kleine vogelboek",
-        "img": "../assets/books/b-vogelboek.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
-      },
-      {
-        "name": "Het Mysterieuze horloge van Walker & Dawn",
-        "img": "../assets/books/b-mysterieuzehorloge.jpg",
-        "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
-      }
-    ]
+[
+  {
+    "name": "Kinderboeken",
+    "Kinderboeken": {
+      "books": [
+        {
+          "name": "Mary Poppins",
+          "img": "b-marypoppins",
+          "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
+        },
+        {
+          "name": "Mijn kleine vogelboek",
+          "img": "b-vogelboek",
+          "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
+        },
+        {
+          "name": "Het Mysterieuze",
+          "img": "b-mysterieuzehorloge",
+          "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
+        },
+        {
+          "name": "Het grote poeperde...",
+          "img": "b-poeperde",
+          "url": "https://www.libris.nl/boek/?authortitle=marianne-busser-ron-schroder/het-grote-poeperdepoepboek--9789048845606"
+        }
+      ]
+    },
+    "Detective": {
+      "books": [
+        {
+          "name": "Victoriaanse detective",
+          "img": "b-victoriaans",
+          "url": "https://www.libris.nl/boek/?authortitle=robbert-jan-swiers/mary-copeland-victoriaanse-detective--9789463385053"
+        },
+        {
+          "name": "De dronken detective",
+          "img": "b-drunkdetec",
+          "url": "https://www.libris.nl/boek/?authortitle=craig-kee-strete/de-dronken-detective--9789062658992"
+        },
+        {
+          "name": "De vreesmachine",
+          "img": "b-vreesmachine",
+          "url": "https://www.libris.nl/boek/?authortitle=a-stil-ashe-stil/de-vreesmachine-detective-over-de-bouwfraude--9789054293125"
+        },
+        {
+          "name": "Victims of Dead man walking",
+          "img": "b-victimsof",
+          "url": "https://www.libris.nl/boek/?authortitle=varnado-detective-michael/victims-of-dead-man-walking--9781589801561"
+        }
+      ]
+    },
+    "Science Fiction": {
+      "books": [
+        {
+          "name": "Mary Poppins",
+          "img": "b-marypoppins",
+          "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
+        },
+        {
+          "name": "Mijn kleine vogelboek",
+          "img": "b-vogelboek",
+          "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
+        },
+        {
+          "name": "Het Mysterieuze horloge van Walker & Dawn",
+          "img": "b-mysterieuzehorloge",
+          "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
+        }
+      ]
+    },
+    "Biografie": {
+      "books": [
+        {
+          "name": "Mary Poppins",
+          "img": "../assets/books/b-marypoppins.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
+        },
+        {
+          "name": "Mijn kleine vogelboek",
+          "img": "../assets/books/b-vogelboek.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
+        },
+        {
+          "name": "Het Mysterieuze horloge van Walker & Dawn",
+          "img": "../assets/books/b-mysterieuzehorloge.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
+        }
+      ]
+    },
+    "Fantasy": {
+      "books": [
+        {
+          "name": "Mary Poppins",
+          "img": "../assets/books/b-marypoppins.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
+        },
+        {
+          "name": "Mijn kleine vogelboek",
+          "img": "../assets/books/b-vogelboek.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
+        },
+        {
+          "name": "Het Mysterieuze horloge van Walker & Dawn",
+          "img": "../assets/books/b-mysterieuzehorloge.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
+        }
+      ]
+    },
+    "Thriller": {
+      "books": [
+        {
+          "name": "Mary Poppins",
+          "img": "../assets/books/b-marypoppins.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
+        },
+        {
+          "name": "Mijn kleine vogelboek",
+          "img": "../assets/books/b-vogelboek.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
+        },
+        {
+          "name": "Het Mysterieuze horloge van Walker & Dawn",
+          "img": "../assets/books/b-mysterieuzehorloge.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
+        }
+      ]
+    },
+    "Oorlog": {
+      "books": [
+        {
+          "name": "Mary Poppins",
+          "img": "../assets/books/b-marypoppins.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
+        },
+        {
+          "name": "Mijn kleine vogelboek",
+          "img": "../assets/books/b-vogelboek.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
+        },
+        {
+          "name": "Het Mysterieuze",
+          "img": "../assets/books/b-mysterieuzehorloge.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
+        }
+      ]
+    },
+    "Romans": {
+      "books": [
+        {
+          "name": "Mary Poppins",
+          "img": "../assets/books/b-marypoppins.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
+        },
+        {
+          "name": "Mijn kleine vogelboek",
+          "img": "../assets/books/b-vogelboek.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
+        },
+        {
+          "name": "Het Mysterieuze horloge van Walker & Dawn",
+          "img": "../assets/books/b-mysterieuzehorloge.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
+        }
+      ]
+    },
+    "Kookboeken": {
+      "books": [
+        {
+          "name": "Mary Poppins",
+          "img": "../assets/books/b-marypoppins.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=p-l-travers/mary-poppins--9789021679099"
+        },
+        {
+          "name": "Mijn kleine vogelboek",
+          "img": "../assets/books/b-vogelboek.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=katrin-wiehle/mijn-kleine-vogelboek--9789089672728"
+        },
+        {
+          "name": "Het Mysterieuze horloge van Walker & Dawn",
+          "img": "../assets/books/b-mysterieuzehorloge.jpg",
+          "url": "https://www.libris.nl/boek/?authortitle=davide-morosinotto/het-mysterieuze-horloge-van-walker-dawn--9789059246003"
+        }
+      ]
+    }
   }
-}
+]
