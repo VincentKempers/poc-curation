@@ -1,7 +1,7 @@
 <template>
   <div class="Dash">
     <div class="gridblocks">
-      <div class="barcode">
+      <router-link to="/Portemonnee" class="barcode">
         <img src="../assets/wallet.svg" alt="portemonee">
         <h3>Portemonnee</h3>
         <div class="code-container">
@@ -28,29 +28,25 @@
         <section class="bump">
           <span>meer ></span>
         </section>
-      </div>
+      </router-link>
       <div class="books">
         <h3>Genre</h3>
         <ul>
           <li>
-            <img src alt>
-            <span>bookname</span>
+            <img src="../assets/books/b-fiftysg.jpg" alt="fiftyshadesofgray">
+            <span>Fifty shades of Grey</span>
           </li>
           <li>
-            <img src alt>
-            <span>bookname</span>
+            <img src="../assets/books/b-fiftysg.jpg" alt="fiftyshadesofgray">
+            <span>Fifty shades of Grey</span>
           </li>
           <li>
-            <img src alt>
-            <span>bookname</span>
+            <img src="../assets/books/b-fiftysg.jpg" alt="fiftyshadesofgray">
+            <span>Fifty shades of Grey</span>
           </li>
           <li>
-            <img src alt>
-            <span>bookname</span>
-          </li>
-          <li>
-            <img src alt>
-            <span>bookname</span>
+            <img src="../assets/books/b-fiftysg.jpg" alt="fiftyshadesofgray">
+            <span>Fifty shades of Grey</span>
           </li>
         </ul>
       </div>
@@ -151,6 +147,7 @@ h3 {
   grid-template-areas: "bc1 bc1 bc1 bc1" "books books books books" "bo1 bo1 eb1 eb1" "ev1 ev1 ev1 ev1";
   grid-gap: 0.3em;
   margin-bottom: 6em;
+
   .barcode {
     grid-area: bc1;
     background-color: #4da1ff;
@@ -158,6 +155,7 @@ h3 {
     padding-left: 1em;
     padding-right: 1em;
     text-align: left;
+    text-decoration: none;
     img {
       width: 1em;
       margin-top: 0.8em;
@@ -219,6 +217,9 @@ h3 {
         }
       }
     }
+    &:visited {
+      color: black;
+    }
   }
   .books {
     grid-area: books;
@@ -238,6 +239,10 @@ h3 {
       li {
         display: flex;
         flex-direction: column;
+        margin-right: 2.8em;
+        img {
+          width: 5.5em;
+        }
       }
     }
   }
@@ -245,8 +250,7 @@ h3 {
     grid-area: bo1;
     background-color: #4da1ff;
     border-radius: 5px;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding: 0 1em 1em 1em;
     text-align: left;
     img {
       width: 1em;
@@ -275,7 +279,7 @@ h3 {
     background-color: #4da1ff;
     border-radius: 5px;
     padding-left: 1em;
-    // padding-right: 1em;
+    padding-bottom: 1em;
     text-align: left;
     img {
       width: 0.8em;
