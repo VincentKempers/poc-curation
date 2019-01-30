@@ -6,6 +6,7 @@ import Dashboard from "./views/Dashboard.vue";
 import Promo from "./views/Promo.vue";
 import Promodashboard from "./views/Promodashboard.vue";
 import Portemonnee from "./views/Portemonnee.vue";
+import Choose from "./views/Choosestore.vue";
 
 Vue.use(Router);
 
@@ -45,6 +46,11 @@ export default new Router({
       path: "/promodashboard",
       name: "PromoDash",
       component: Promodashboard
+    },
+    {
+      path: "/Choosestore",
+      name: "Choose",
+      component: Choose
     }
   ]
 });

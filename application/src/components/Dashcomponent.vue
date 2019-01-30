@@ -50,72 +50,74 @@
         <h3>E-books</h3>
       </div>
       <div class="events">
-        <img src="../assets/calendar.png" alt="events icon">
-        <h3>Evenementen</h3>
-        <div class="sidescroll">
-          <ul>
-            <li>
-              <div class="ticket">
-                <section id="event">
-                  <span>evenement</span>
-                  <h5>schrijverspitch bij Monique</h5>
-                </section>
-                <section id="when">
-                  <span>wanneer</span>
-                  <h4>2 Februari, 2019 15:00</h4>
-                </section>
-              </div>
-            </li>
-            <li>
-              <div class="ticket">
-                <section id="event">
-                  <span>evenement</span>
-                  <h5>Voorleesochtend:</h5>
-                </section>
-                <section id="when">
-                  <span>wanneer</span>
-                  <h4>2 Februari, 2019 15:00</h4>
-                </section>
-              </div>
-            </li>
-            <li>
-              <div class="ticket">
-                <section id="event">
-                  <span>evenement</span>
-                  <h5>Feestlijke boekpresentatie</h5>
-                </section>
-                <section id="when">
-                  <span>wanneer</span>
-                  <h4>3 Februari, 2019 15:00</h4>
-                </section>
-              </div>
-            </li>
-            <li>
-              <div class="ticket">
-                <section id="event">
-                  <span>evenement</span>
-                  <h5>De Nieuwe Leeskring</h5>
-                </section>
-                <section id="when">
-                  <span>wanneer</span>
-                  <h4>4 Februari, 2019 15:00</h4>
-                </section>
-              </div>
-            </li>
-            <li>
-              <div class="ticket">
-                <section id="event">
-                  <span>evenement</span>
-                  <h5>Boekbespreking</h5>
-                </section>
-                <section id="when">
-                  <span>wanneer</span>
-                  <h4>6 Februari, 2019 15:00</h4>
-                </section>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <router-link to="/Choosestore">
+          <img src="../assets/calendar.png" alt="events icon">
+          <h3>Evenementen</h3>
+          <div class="sidescroll">
+            <ul>
+              <li>
+                <div class="ticket">
+                  <section id="event">
+                    <span>evenement</span>
+                    <h5>schrijverspitch bij Monique</h5>
+                  </section>
+                  <section id="when">
+                    <span>wanneer</span>
+                    <h4>2 Februari, 2019 15:00</h4>
+                  </section>
+                </div>
+              </li>
+              <li>
+                <div class="ticket">
+                  <section id="event">
+                    <span>evenement</span>
+                    <h5>Voorleesochtend:</h5>
+                  </section>
+                  <section id="when">
+                    <span>wanneer</span>
+                    <h4>2 Februari, 2019 15:00</h4>
+                  </section>
+                </div>
+              </li>
+              <li>
+                <div class="ticket">
+                  <section id="event">
+                    <span>evenement</span>
+                    <h5>Feestlijke boekpresentatie</h5>
+                  </section>
+                  <section id="when">
+                    <span>wanneer</span>
+                    <h4>3 Februari, 2019 15:00</h4>
+                  </section>
+                </div>
+              </li>
+              <li>
+                <div class="ticket">
+                  <section id="event">
+                    <span>evenement</span>
+                    <h5>De Nieuwe Leeskring</h5>
+                  </section>
+                  <section id="when">
+                    <span>wanneer</span>
+                    <h4>4 Februari, 2019 15:00</h4>
+                  </section>
+                </div>
+              </li>
+              <li>
+                <div class="ticket">
+                  <section id="event">
+                    <span>evenement</span>
+                    <h5>Boekbespreking</h5>
+                  </section>
+                  <section id="when">
+                    <span>wanneer</span>
+                    <h4>6 Februari, 2019 15:00</h4>
+                  </section>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </router-link>
       </div>
     </div>
   </div>
@@ -279,56 +281,60 @@ h3 {
     padding-left: 1em;
     padding-bottom: 1em;
     text-align: left;
-    img {
-      width: 0.8em;
-      margin-top: 0.8em;
-    }
-    .sidescroll {
-      max-width: 100%;
-      border-radius: 5px;
-      ul {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        margin: 0;
-        margin-top: 0.4em;
-        padding: 0;
-        padding-right: 1em;
-        overflow-x: scroll;
-        li {
-          margin-right: 0.5em;
-          .ticket {
-            padding: 0.4em;
-            border-radius: 5px;
-            background-color: white;
-            width: 10em;
-            margin-right: 0.7em;
-          }
-          #event {
-            margin: 0;
-            margin-bottom: 0.5em;
-            span {
-              font-size: 0.6em;
-              text-transform: uppercase;
+    a {
+      text-decoration: none;
+      color: black;
+      img {
+        width: 0.8em;
+        margin-top: 0.8em;
+      }
+      .sidescroll {
+        max-width: 100%;
+        border-radius: 5px;
+        ul {
+          display: flex;
+          flex-direction: row;
+          list-style: none;
+          margin: 0;
+          margin-top: 0.4em;
+          padding: 0;
+          padding-right: 1em;
+          overflow-x: scroll;
+          li {
+            margin-right: 0.5em;
+            .ticket {
+              padding: 0.4em;
+              border-radius: 5px;
+              background-color: white;
+              width: 10em;
+              margin-right: 0.7em;
             }
-            h5 {
+            #event {
               margin: 0;
+              margin-bottom: 0.5em;
+              span {
+                font-size: 0.6em;
+                text-transform: uppercase;
+              }
+              h5 {
+                margin: 0;
+              }
+              h4 {
+                margin: 0;
+              }
             }
-            h4 {
+            #when {
               margin: 0;
-            }
-          }
-          #when {
-            margin: 0;
-            span {
-              font-size: 0.6em;
-              text-transform: uppercase;
-            }
-            h4 {
-              margin: 0;
-            }
-            h5 {
-              margin: 0;
+              span {
+                font-size: 0.6em;
+                text-transform: uppercase;
+              }
+              h4 {
+                margin: 0;
+              }
+              h5 {
+                margin: 0;
+              }
             }
           }
         }
