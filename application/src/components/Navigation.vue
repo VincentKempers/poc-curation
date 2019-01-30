@@ -1,16 +1,16 @@
 <template>
   <div id="nav">
     <router-link to="/dashboard">
-      <img src="../assets/Icon/Compass.png" alt>
+      <img src="../assets/Icons/Compass.png" alt>
     </router-link>
     <router-link to="/alfred">
-      <img src="../assets/Icon/Bell.png" alt>
+      <img src="../assets/Icons/Bell.png" alt>
     </router-link>
     <router-link to="/alfred">
-      <img src="../assets/Icon/Heart.png" alt>
+      <img src="../assets/Icons/Heart.png" alt>
     </router-link>
     <router-link to="/portemonnee">
-      <img src="../assets/Icon/User.png" alt>
+      <img src="../assets/Icons/User.png" alt>
     </router-link>
   </div>
 </template>
